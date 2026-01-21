@@ -8,10 +8,11 @@ body {
   background: rgba(235, 235, 235, 0.1);
   backdrop-filter: blur(10px);
 }
-.navbar-transparent {
-  background: transparent;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+.nav-transparent {
+  background: rgba(0,0,0,.2);
+  backdrop-filter: blur(6px);
 }
+
 
 .navbar-dark .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.9);
@@ -26,6 +27,16 @@ body {
   font-weight: 700;
   color: #ffffff;
 }
+
+.btn-gradient {
+  background: linear-gradient(45deg, #8f00ff, #ff0077);
+  border: none;
+}
+
+.btn-gradient:hover {
+  opacity: .9;
+}
+
 
 /* Hero */
 .hero {
