@@ -29,12 +29,18 @@ body {
 }
 
 .btn-gradient {
-  background: linear-gradient(45deg, #8f00ff, #ff0077);
-  border: none;
+  transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .btn-gradient:hover {
-  opacity: .9;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255,0,200,.4);
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, #ff2bd6, #8f00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 
@@ -147,3 +153,18 @@ body {
   background: #080814;
   color: #aaa;
 }
+
+/* prueba */
+.hero-image {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  background:
+    radial-gradient(circle at center, rgba(0,0,0,.1), rgba(0,0,0,.85)),
+    linear-gradient(to right, rgba(10,10,30,.9), rgba(10,10,30,.3));
+}
+
