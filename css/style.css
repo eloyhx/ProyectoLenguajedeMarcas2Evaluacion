@@ -1,72 +1,170 @@
+body {
+  background: #0b0c1a;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-.tab.active {
-background: var(--primary);
-color: #fff;
-border-color: transparent;
+/* Navbar glass */
+.nav-glass {
+  background: rgba(235, 235, 235, 0.1);
+  backdrop-filter: blur(10px);
+}
+.nav-transparent {
+  background: rgba(0,0,0,.2);
+  backdrop-filter: blur(6px);
 }
 
 
-h1 {
-font-size: 44px;
-line-height: 1.1;
-margin-bottom: 24px;
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ff2bd6; /* tu color acento */
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.btn-gradient {
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255,0,200,.4);
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, #ff2bd6, #8f00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 
-.subtitle {
-color: var(--text-muted);
-margin-bottom: 32px;
-font-size: 14px;
-}
-
-
-.btn-primary {
-background: var(--primary);
-color: white;
-padding: 14px 22px;
-border-radius: 10px;
-border: none;
-font-weight: 600;
-cursor: pointer;
-}
-
-
-.hero-image {
-position: absolute;
-right: -80px;
-bottom: -40px;
-width: 65%;
-max-width: 900px;
-opacity: 0.95;
-}
-
-
-/* ===== MOBILE ===== */
-@media (max-width: 900px) {
-header {
-padding: 20px 24px;
-}
-
-
-nav {
-display: none;
-}
-
-
+/* Hero */
 .hero {
-margin: 16px;
-padding: 28px;
+  min-height: 100vh;
+  background: linear-gradient(to right, rgba(10,10,30,.8), rgba(10,10,30,.4)),
+              url("../img/hero.jpg") center/cover no-repeat;
+  padding-top: 120px;
 }
-
 
 .hero-image {
-position: static;
-width: 100%;
-margin-top: 32px;
+  height: 100vh;
+  background: url("../imgs/nika-qufarashvili-lSTN0nYAUKA-unsplash.jpg") center/cover no-repeat;
+  position: relative;
 }
 
 
-h1 {
-font-size: 30px;
+/* Sections */
+.section-dark {
+  padding: 80px 0;
+  color: #fff;
 }
+
+.section-title {
+  text-align: center;
+  font-weight: bold;
+  position: relative;
 }
+
+/* Cards */
+.car-card {
+  background: #12132b;
+  border: none;
+  color: white;
+}
+
+.car-card img {
+  height: 220px;
+  object-fit: cover;
+}
+.car-card video {
+  height: 220px;
+  object-fit: cover;
+}
+
+/*of canva /*/
+
+.offcanvas-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  max-height: 90vh;
+  border-radius: 16px;
+}
+
+.offcanvas-center .offcanvas-body {
+  overflow-y: auto;
+}
+
+.offcanvas-backdrop {
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* implementacion nueva */
+
+.offcanvas-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  border-radius: 16px;
+}
+
+.offcanvas-backdrop {
+  backdrop-filter: blur(6px);
+  background-color: rgba(0,0,0,.6);
+}
+
+
+
+/* News */
+.news-card {
+  background: #12132b;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+/* Buttons */
+.btn-gradient {
+  background: linear-gradient(45deg, #8f00ff, #ff0077);
+  color: white;
+  border: none;
+}
+
+.btn-outline-gradient {
+  border: 1px solid #8f00ff;
+  color: #8f00ff;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  background: #080814;
+  color: #aaa;
+}
+
+/* prueba */
+.hero-image {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  background:
+    radial-gradient(circle at center, rgba(0,0,0,.1), rgba(0,0,0,.85)),
+    linear-gradient(to right, rgba(10,10,30,.9), rgba(10,10,30,.3));
+}
+
