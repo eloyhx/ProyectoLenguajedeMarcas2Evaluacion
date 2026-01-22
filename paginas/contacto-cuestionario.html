@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto - Cuestionario | SuperDeportivos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS (mismos colores y estilo) -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR (mismo estilo) -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="../index.html">🏎️ SuperCars</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="modelos.html">Modelos</a></li>
+        <li class="nav-item"><a class="nav-link" href="marcas.html">Marcas</a></li>
+        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+  <li class="nav-item"><a class="nav-link active" aria-current="page" href="contacto-cuestionario.html">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- CONTENIDO PRINCIPAL -->
+<main class="container mt-5 pt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+  <h1 class="text-center mb-3 text-white">Contáctanos</h1>
+  <p class="text-center text-white mb-4">Has llegado al formulario rápido con el cuestionario prellenado. Completa tus datos y envía cuando quieras.</p>
+
+      <!-- Card con formulario -->
+      <div class="card bg-dark text-white p-4">
+        <div class="card-body">
+          <form id="contactForm" action="#" method="get">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Juan" required>
+              <div class="invalid-feedback">Por favor, indica tu nombre.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="apellidos" class="form-label">Apellidos</label>
+              <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Pérez" required>
+              <div class="invalid-feedback">Por favor, indica tus apellidos.</div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" pattern="[0-9+() -]{6,}" placeholder="+34 600 000 000" required>
+                <div class="invalid-feedback">Introduce un teléfono válido.</div>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="tu.nombre@gmail.com" required>
+                <div class="invalid-feedback">Introduce un correo válido.</div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="asunto" class="form-label">Asunto</label>
+              <input type="text" class="form-control" id="asunto" name="asunto" placeholder="Ej: Información sobre Ferrari F8 Tributo">
+            </div>
+
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Cuestionario / Mensaje</label>
+              <textarea class="form-control" id="mensaje" name="mensaje" rows="8" required
+                placeholder="Quisiera recibir información sobre:
+- Modelo(es) de interés (indica nombre/s):
+- Presupuesto aproximado:
+- Opciones de financiamiento solicitadas:
+- Disponibilidad para prueba de conducción (fechas/ciudad):
+- Comentarios adicionales / preguntas:"></textarea>
+              <div class="invalid-feedback">Cuéntanos brevemente qué necesitas.</div>
+            </div>
+
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="consent" required>
+              <label class="form-check-label" for="consent">Acepto que me contacten vía teléfono o correo para facilitar información</label>
+              <div class="invalid-feedback">Debes aceptar para que podamos contactarte.</div>
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-gradient btn-lg">Enviar y ser contactado</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+<!-- FOOTER (mismo estilo) -->
+<footer class="footer text-center mt-5">
+  <p>© 2026 SuperCars · Todos los derechos reservados</p>
+</footer>
+
+
+<!-- No JS: página estática con cuestionario prellenado -->
+
+</body>
+</html>

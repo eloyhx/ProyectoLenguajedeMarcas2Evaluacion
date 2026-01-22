@@ -147,6 +147,32 @@ body {
   color: #8f00ff;
 }
 
+/* Placeholder color for inputs/textarea to appear as light gray info text */
+.form-control::placeholder {
+  color: #bfc4c9; /* gris claro */
+  opacity: 1; /* for consistent color across browsers */
+  white-space: pre-wrap; /* preserve newlines in multiline placeholders */
+}
+
+/* Vendor prefixes for broader placeholder support */
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #bfc4c9;
+  white-space: pre-wrap;
+}
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+  color: #bfc4c9;
+  white-space: pre-wrap;
+}
+.form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #bfc4c9;
+  white-space: pre-wrap;
+}
+.form-control::-moz-placeholder { /* Firefox 19+ */
+  color: #bfc4c9;
+  opacity: 1;
+  white-space: pre-wrap;
+}
+
 /* Footer */
 .footer {
   padding: 20px;
