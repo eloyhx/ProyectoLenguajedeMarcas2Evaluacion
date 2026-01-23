@@ -332,6 +332,11 @@
     `;
   });
 
+  // Mostrar carrusel cuando ya está posicionado
+requestAnimationFrame(() => {
+  document.querySelector('.carousel-3d').style.opacity = '1';
+});
+
   function setActiveCard(index) {
     cards.forEach((card, i) => {
       card.classList.toggle('active', i === index);
