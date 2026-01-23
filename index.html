@@ -5,10 +5,10 @@
   <title>SuperCars</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap 5 -->
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,22 +17,16 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent">
   <div class="container">
 
-    <!-- LOGO -->
     <a class="navbar-brand fw-bold" href="../index.html">SuperCars</a>
 
-    <!-- BOTÓN HAMBURGUESA -->
     <button class="navbar-toggler" type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
+            data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- MENÚ -->
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
 
         <li class="nav-item">
           <a class="nav-link" href="../index.html">Inicio</a>
@@ -50,17 +44,17 @@
           <a class="nav-link" href="../paginas/noticias.html">Noticias</a>
         </li>
 
+        <li class="nav-item ms-lg-3">
+          <a class="btn btn-gradient btn-sm rounded-pill px-4"
+             href="../ProyectoLenguajedeMarcas2Evaluacion/paginas/contacto-cuestionario.html">
+            Contáctanos
+          </a>
+        </li>
+
       </ul>
-
-      <!-- CTA fuera del <ul> para mejor semántica -->
-    <li class="nav-item d-flex align-items-center ms-lg-3">
-  <a class="btn btn-gradient btn-sm rounded-pill px-4" href="../ProyectoLenguajedeMarcas2Evaluacion/paginas/contacto-cuestionario.html">Contáctanos</a>
-</li>
     </div>
-
   </div>
 </nav>
-
 
 <!-- HERO -->
 <section class="hero-image d-flex align-items-center">
@@ -70,124 +64,110 @@
     <div class="row">
       <div class="col-lg-6 text-white">
         <h1 class="display-4 fw-bold text-uppercase">
-  Descubre los mejores<br>
-  <span class="text-gradient">Superdeportivos</span>
-</h1>
+          Descubre los mejores<br>
+          <span class="text-gradient">Superdeportivos</span>
+        </h1>
 
-        <p class="lead">Los autos más exclusivos y veloces del planeta te esperan</p>
+        <p class="lead">
+          Los autos más exclusivos y veloces del planeta te esperan
+        </p>
+
         <a href="#modelos" class="btn btn-gradient btn-lg px-4">
-    Ver modelos
-  </a>
-
+          Ver modelos
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-
 <!-- MODELOS DESTACADOS -->
-<section class="section-dark">
+<section class="section-dark" id="modelos">
   <div class="container">
     <h2 class="section-title">MODELOS DESTACADOS</h2>
+
     <div class="row g-4 mt-4">
-      <div class="col-md-4">
-        <div class="card car-card">
-           <video class="card-img-top" autoplay muted loop playsinline>
-             <source src="vdeos/7727416-hd_1920_1080_25fps.mp4" type="video/mp4">
-           </video>
-             
-          <div class="card-body text-center">
-            <h5>Lamborghini Aventador</h5>
-<button class="btn btn-outline-gradient btn-sm"
-  data-bs-toggle="offcanvas"
-  data-bs-target="#offcanvasCar"
-  data-title="Lamborghini Aventador"
-  data-video="videos/7727416-hd_1920_1080_25fps.mp4"
-  data-desc="Superdeportivo V12 con diseño extremo y prestaciones de alto nivel."
-  data-specs="Motor V12|0–100 km/h: 2.9s|Velocidad máx: 350 km/h">
-  Ver más
-</button>
 
-
-          </div>
-        </div>
-      </div>
-
+      <!-- CARD -->
       <div class="col-md-4">
         <div class="card car-card">
           <video class="card-img-top" autoplay muted loop playsinline>
-             <source src="vdeos/8443861-uhd_3840_2160_30fps.mp4" type="video/mp4">
-           </video>
+            <source src="vdeos/lambo.mp4" type="video/mp4">
+          </video>
+
           <div class="card-body text-center">
-            <h5>Ferrari F8 Tributo</h5>
-<button class="btn btn-outline-gradient btn-sm"
-  data-bs-toggle="offcanvas"
-  data-bs-target="#offcanvasCar"
-  data-title="Ferrari F8 Tributo"
-  data-video="videos/8443861-uhd_3840_2160_30fps.mp4"
-  data-desc="Deportivo italiano con motor V8 biturbo y aerodinámica avanzada."
-  data-specs="Motor V8|0–100 km/h: 2.8s|Velocidad máx: 340 km/h">
-  Ver más
-</button>
-
-
-
+            <h5>Lamborghini Aventador</h5>
+            <button class="btn btn-outline-gradient btn-sm"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasCar"
+              data-title="Lamborghini Aventador"
+              data-video="videos/7727416-hd_1920_1080_25fps.mp4"
+              data-desc="Superdeportivo V12 con diseño extremo y prestaciones de alto nivel."
+              data-specs="Motor V12|0–100 km/h: 2.9s|Velocidad máx: 350 km/h">
+              Ver más
+            </button>
           </div>
         </div>
       </div>
 
+      <!-- CARD -->
       <div class="col-md-4">
         <div class="card car-card">
-         <video class="card-img-top" autoplay muted loop playsinline>
-             <source src="vdeos/13127658_1920_1080_24fps.mp4" type="video/mp4">
-           </video>
+          <video class="card-img-top" autoplay muted loop playsinline>
+            <source src="vdeos/ferrari.mp4" type="video/mp4">
+          </video>
+
           <div class="card-body text-center">
-            <h5>McLaren 720S</h5>
-<button class="btn btn-outline-gradient btn-sm"
-  data-bs-toggle="offcanvas"
-  data-bs-target="#offcanvasCar"
-  data-title="McLaren 720S"
-  data-video="videos/13127658_1920_1080_24fps.mp4"
-  data-desc="Superdeportivo británico ligero y extremadamente rápido."
-  data-specs="Motor V8|0–100 km/h: 2.9s|Velocidad máx: 341 km/h">
-  Ver más
-</button>
-
-
+            <h5>Ferrari F8 Tributo</h5>
+            <button class="btn btn-outline-gradient btn-sm"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasCar"
+              data-title="Ferrari F8 Tributo"
+              data-video="videos/8443861-uhd_3840_2160_30fps.mp4"
+              data-desc="Deportivo italiano con motor V8 biturbo y aerodinámica avanzada."
+              data-specs="Motor V8|0–100 km/h: 2.8s|Velocidad máx: 340 km/h">
+              Ver más
+            </button>
           </div>
         </div>
       </div>
+
+      <!-- CARD -->
+      <div class="col-md-4">
+        <div class="card car-card">
+          <video class="card-img-top" autoplay muted loop playsinline>
+            <source src="vdeos/mcLaren.mp4" type="video/mp4">
+          </video>
+
+          <div class="card-body text-center">
+            <h5>McLaren 720S</h5>
+            <button class="btn btn-outline-gradient btn-sm"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasCar"
+              data-title="McLaren 720S"
+              data-video="videos/13127658_1920_1080_24fps.mp4"
+              data-desc="Superdeportivo británico ligero y extremadamente rápido."
+              data-specs="Motor V8|0–100 km/h: 2.9s|Velocidad máx: 341 km/h">
+              Ver más
+            </button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-
-
-
-<!-- GALERÍA -->
+<!-- GALERÍA / CARRUSEL 3D -->
 <section class="section-dark">
   <div class="container text-center">
     <h2 class="section-title mb-5">GALERÍA EXCLUSIVA</h2>
 
     <div class="carousel-3d">
       <div class="carousel-track">
-
-        <div class="carousel-card">
-        <img src="../ProyectoLenguajedeMarcas2Evaluacion/imgs/ferrari.jpg" alt="Lamborghini Aventador">
-        </div>
-
-        <div class="carousel-card">
-          <img src="../ProyectoLenguajedeMarcas2Evaluacion/imgs/galeria_ferrari.jpg" alt="Lamborghini Aventador">
-        </div>
-
-        <div class="carousel-card">
-         <img src="../ProyectoLenguajedeMarcas2Evaluacion/imgs/nika-qufarashvili-lSTN0nYAUKA-unsplash.jpg" alt="Lamborghini Aventador">
-        </div>
-
-        <div class="carousel-card">
-         <img src="../ProyectoLenguajedeMarcas2Evaluacion/imgs/lamborghini.jpg  " alt="Lamborghini Aventador">
-        </div>
-
+        <div class="carousel-card"><img src="imgs/ferrari.jpg"></div>
+        <div class="carousel-card"><img src="imgs/galeria_ferrari.jpg"></div>
+        <div class="carousel-card"><img src="imgs/nika-qufarashvili-lSTN0nYAUKA-unsplash.jpg"></div>
+        <div class="carousel-card"><img src="imgs/lamborghini.jpg"></div>
       </div>
     </div>
 
@@ -195,232 +175,135 @@
       <button class="btn btn-gradient btn-sm" id="prev">‹</button>
       <button class="btn btn-gradient btn-sm" id="next">›</button>
     </div>
-
   </div>
 </section>
-
 
 <!-- NOTICIAS -->
 <section class="section-dark">
   <div class="container">
     <h2 class="section-title">ÚLTIMAS NOTICIAS</h2>
 
-    <div class="row mt-4">
+    <div class="row mt-4 g-4">
+
       <div class="col-md-6">
-        <div class="news-card">
-          <h5>Nuevos Lanzamientos 2022</h5>
-          <p>Descubre los últimos modelos que llegan este año</p>
-          <a href="#">Leer más →</a>
+        <div class="news-card h-100">
+          <h5>Nuevos Lanzamientos 2026</h5>
+          <p>
+            Descubre los últimos superdeportivos que llegan este año
+            con tecnología híbrida y diseños extremos.
+          </p>
+          <a href="#" class="text-gradient fw-semibold">
+            Leer más →
+          </a>
         </div>
       </div>
+
       <div class="col-md-6">
-        <div class="news-card">
+        <div class="news-card h-100">
           <h5>Eventos de Velocidad</h5>
-          <p>Conoce los eventos más extremos del mundo motor</p>
-          <a href="#">Leer más →</a>
+          <p>
+            Conoce los eventos más exclusivos del mundo del motor,
+            circuitos y presentaciones privadas.
+          </p>
+          <a href="#" class="text-gradient fw-semibold">
+            Leer más →
+          </a>
         </div>
       </div>
+
     </div>
   </div>
 </section>
+
 
 <!-- FOOTER -->
 <footer class="footer text-center">
   <p>© 2026 SuperCars · Todos los derechos reservados</p>
 </footer>
 
-<!-- OFFCANVAS DETALLES AUTO -->
+<!-- OFFCANVAS -->
 <div class="offcanvas offcanvas-center text-bg-dark" tabindex="-1" id="offcanvasCar">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasTitle"></h5>
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
   </div>
 
   <div class="offcanvas-body">
-
-    <div class="offcanvas-body">
-
-  <!-- MEDIA (VIDEO / IMAGEN) -->
-  <div class="mb-3">
-    <video id="offcanvasVideo"
-           class="w-100 rounded d-none"
-           autoplay muted loop playsinline>
+    <video id="offcanvasVideo" class="w-100 rounded mb-3" autoplay muted loop playsinline>
       <source src="" type="video/mp4">
     </video>
 
-    <img id="offcanvasImage"
-         class="img-fluid rounded d-none"
-         alt="Imagen del vehículo">
+    <p id="offcanvasDesc"></p>
+    <ul class="list-group list-group-flush mb-3" id="offcanvasSpecs"></ul>
+
+    <a href="paginas/contacto-cuestionario.html"
+       class="btn btn-gradient w-100 rounded-pill">
+      Contactar
+    </a>
   </div>
-
-  <!-- DESCRIPCIÓN -->
-  <p id="offcanvasDesc"></p>
-
-  <!-- SPECS -->
-  <ul class="list-group list-group-flush mb-3" id="offcanvasSpecs"></ul>
-
-  <a href="paginas/contacto-cuestionario.html" class="btn btn-gradient w-100">Contactar</a>
 </div>
 
-</div>
-
-
+<!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
- <!-- script para informacion de modelos -->
-
 <script>
-  const offcanvasElement = document.getElementById('offcanvasCar');
+  const offcanvas = document.getElementById('offcanvasCar');
 
-  offcanvasElement.addEventListener('show.bs.offcanvas', function (event) {
-    const button = event.relatedTarget;
+  offcanvas.addEventListener('show.bs.offcanvas', (e) => {
+    const b = e.relatedTarget;
+    document.getElementById('offcanvasTitle').textContent = b.dataset.title;
+    document.querySelector('#offcanvasVideo source').src = b.dataset.video;
+    document.getElementById('offcanvasVideo').load();
+    document.getElementById('offcanvasDesc').textContent = b.dataset.desc;
 
-    // Leer data-attributes
-    const title = button.getAttribute('data-title');
-    const video = button.getAttribute('data-video');
-    const desc = button.getAttribute('data-desc');
-    const specs = button.getAttribute('data-specs').split('|');
-
-    // Título
-    document.getElementById('offcanvasTitle').textContent = title;
-
-    // Vídeo
-    const videoEl = document.getElementById('offcanvasVideo');
-    const sourceEl = videoEl.querySelector('source');
-    sourceEl.src = video;
-    videoEl.load();
-
-    // Descripción
-    document.getElementById('offcanvasDesc').textContent = desc;
-
-    // Specs
-    const specsList = document.getElementById('offcanvasSpecs');
-    specsList.innerHTML = '';
-
-    specs.forEach(spec => {
+    const list = document.getElementById('offcanvasSpecs');
+    list.innerHTML = '';
+    b.dataset.specs.split('|').forEach(s => {
       const li = document.createElement('li');
       li.className = 'list-group-item bg-dark text-white';
-      li.textContent = spec;
-      specsList.appendChild(li);
+      li.textContent = s;
+      list.appendChild(li);
     });
   });
 </script>
-
-
 
 <script>
   const carousel = document.querySelector('.carousel-3d');
   const track = document.querySelector('.carousel-track');
   const cards = document.querySelectorAll('.carousel-card');
-
   const total = cards.length;
   const step = 360 / total;
   const radius = 420;
-
   let rotation = 0;
-  let isDragging = false;
-  let startX = 0;
-  let startRotation = 0;
 
-  // Colocar las cards en círculo (una sola vez)
   cards.forEach((card, i) => {
-    const angle = step * i;
     card.style.transform = `
       translate(-50%, -50%)
-      rotateY(${angle}deg)
+      rotateY(${step * i}deg)
       translateZ(${radius}px)
     `;
   });
 
-  // Mostrar carrusel cuando ya está posicionado
-requestAnimationFrame(() => {
-  document.querySelector('.carousel-3d').style.opacity = '1';
-});
-
-  function setActiveCard(index) {
-    cards.forEach((card, i) => {
-      card.classList.toggle('active', i === index);
-    });
+  function setActive() {
+    const index = ((-rotation / step) % total + total) % total;
+    cards.forEach((c, i) => c.classList.toggle('active', i === Math.round(index)));
   }
 
-  function snapToNearest() {
-    const snapped = Math.round(rotation / step) * step;
-    rotation = snapped;
-    track.style.transform = `rotateY(${rotation}deg)`;
-
-    const activeIndex =
-      ((-rotation / step) % total + total) % total;
-
-    setActiveCard(Math.round(activeIndex));
-  }
-
-  /* ===== BOTONES ===== */
-  document.getElementById('next').addEventListener('click', () => {
+  document.getElementById('next').onclick = () => {
     rotation -= step;
     track.style.transform = `rotateY(${rotation}deg)`;
-    snapToNearest();
-  });
+    setActive();
+  };
 
-  document.getElementById('prev').addEventListener('click', () => {
+  document.getElementById('prev').onclick = () => {
     rotation += step;
     track.style.transform = `rotateY(${rotation}deg)`;
-    snapToNearest();
-  });
+    setActive();
+  };
 
-  /* ===== DRAG MOUSE ===== */
-  carousel.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    startX = e.clientX;
-    startRotation = rotation;
-    track.style.transition = 'none'; // 🔑 clave
-  });
-
-  window.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-
-    const deltaX = e.clientX - startX;
-    rotation = startRotation - deltaX * 0.35;
-    track.style.transform = `rotateY(${rotation}deg)`;
-  });
-
-  window.addEventListener('mouseup', () => {
-    if (!isDragging) return;
-
-    isDragging = false;
-    track.style.transition =
-      'transform 0.8s cubic-bezier(0.77, 0, 0.175, 1)';
-    snapToNearest();
-  });
-
-  /* ===== DRAG TOUCH ===== */
-  carousel.addEventListener('touchstart', (e) => {
-    isDragging = true;
-    startX = e.touches[0].clientX;
-    startRotation = rotation;
-    track.style.transition = 'none';
-  });
-
-  carousel.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
-
-    const deltaX = e.touches[0].clientX - startX;
-    rotation = startRotation - deltaX * 0.35;
-    track.style.transform = `rotateY(${rotation}deg)`;
-  });
-
-  carousel.addEventListener('touchend', () => {
-    if (!isDragging) return;
-
-    isDragging = false;
-    track.style.transition =
-      'transform 0.8s cubic-bezier(0.77, 0, 0.175, 1)';
-    snapToNearest();
-  });
-
-  // Inicial
-  setActiveCard(0);
+  requestAnimationFrame(() => carousel.style.opacity = '1');
+  setActive();
 </script>
-
 
 
 </body>
