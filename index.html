@@ -14,7 +14,7 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top  navbar-transparent ">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent">
   <div class="container">
 
     <!-- LOGO -->
@@ -54,9 +54,7 @@
 
       <!-- CTA fuera del <ul> para mejor semántica -->
     <li class="nav-item d-flex align-items-center ms-lg-3">
-  <a class="btn btn-gradient btn-sm" href="../ProyectoLenguajedeMarcas2Evaluacion/paginas/contacto-cuestionario.html">
-    Contáctanos
-  </a>
+  <a class="btn btn-gradient btn-sm rounded-pill px-4">Contáctanos</a>
 </li>
     </div>
 
@@ -194,8 +192,8 @@
     </div>
 
     <div class="d-flex justify-content-center gap-3 mt-4">
-      <button class="btn btn-outline-light" id="prev">‹</button>
-      <button class="btn btn-outline-light" id="next">›</button>
+      <button class="btn btn-gradient btn-sm" id="prev">‹</button>
+      <button class="btn btn-gradient btn-sm" id="next">›</button>
     </div>
 
   </div>
@@ -271,18 +269,22 @@
 
 
 <script>
+  const carousel = document.querySelector('.carousel-3d');
   const track = document.querySelector('.carousel-track');
   const cards = document.querySelectorAll('.carousel-card');
-  const total = cards.length;
 
-  let rotation = 0;
+  const total = cards.length;
   const step = 360 / total;
   const radius = 420;
 
-  // Colocamos las cards en círculo
+  let rotation = 0;
+  let isDragging = false;
+  let startX = 0;
+  let startRotation = 0;
+
+  // Colocar las cards en círculo (una sola vez)
   cards.forEach((card, i) => {
     const angle = step * i;
-    card.dataset.index = i;
     card.style.transform = `
       translate(-50%, -50%)
       rotateY(${angle}deg)
@@ -290,29 +292,90 @@
     `;
   });
 
-  function updateActiveCard() {
-    const activeIndex =
-      ((-rotation / step) % total + total) % total;
-
+  function setActiveCard(index) {
     cards.forEach((card, i) => {
-      card.classList.toggle('active', i === Math.round(activeIndex));
+      card.classList.toggle('active', i === index);
     });
   }
 
+  function snapToNearest() {
+    const snapped = Math.round(rotation / step) * step;
+    rotation = snapped;
+    track.style.transform = `rotateY(${rotation}deg)`;
+
+    const activeIndex =
+      ((-rotation / step) % total + total) % total;
+
+    setActiveCard(Math.round(activeIndex));
+  }
+
+  /* ===== BOTONES ===== */
   document.getElementById('next').addEventListener('click', () => {
     rotation -= step;
     track.style.transform = `rotateY(${rotation}deg)`;
-    updateActiveCard();
+    snapToNearest();
   });
 
   document.getElementById('prev').addEventListener('click', () => {
     rotation += step;
     track.style.transform = `rotateY(${rotation}deg)`;
-    updateActiveCard();
+    snapToNearest();
   });
 
-  updateActiveCard();
+  /* ===== DRAG MOUSE ===== */
+  carousel.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.clientX;
+    startRotation = rotation;
+    track.style.transition = 'none'; // 🔑 clave
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+
+    const deltaX = e.clientX - startX;
+    rotation = startRotation - deltaX * 0.35;
+    track.style.transform = `rotateY(${rotation}deg)`;
+  });
+
+  window.addEventListener('mouseup', () => {
+    if (!isDragging) return;
+
+    isDragging = false;
+    track.style.transition =
+      'transform 0.8s cubic-bezier(0.77, 0, 0.175, 1)';
+    snapToNearest();
+  });
+
+  /* ===== DRAG TOUCH ===== */
+  carousel.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    startX = e.touches[0].clientX;
+    startRotation = rotation;
+    track.style.transition = 'none';
+  });
+
+  carousel.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+
+    const deltaX = e.touches[0].clientX - startX;
+    rotation = startRotation - deltaX * 0.35;
+    track.style.transform = `rotateY(${rotation}deg)`;
+  });
+
+  carousel.addEventListener('touchend', () => {
+    if (!isDragging) return;
+
+    isDragging = false;
+    track.style.transition =
+      'transform 0.8s cubic-bezier(0.77, 0, 0.175, 1)';
+    snapToNearest();
+  });
+
+  // Inicial
+  setActiveCard(0);
 </script>
+
 
 
 </body>
