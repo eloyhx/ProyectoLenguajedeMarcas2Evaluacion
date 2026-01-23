@@ -271,34 +271,47 @@
 
 
 <script>
+  const track = document.querySelector('.carousel-track');
   const cards = document.querySelectorAll('.carousel-card');
   const total = cards.length;
-  let current = 0;
-  const radius = 420; // distancia 3D
 
-  function updateCarousel() {
+  let rotation = 0;
+  const step = 360 / total;
+  const radius = 420;
+
+  // Colocamos las cards en círculo
+  cards.forEach((card, i) => {
+    const angle = step * i;
+    card.dataset.index = i;
+    card.style.transform = `
+      translate(-50%, -50%)
+      rotateY(${angle}deg)
+      translateZ(${radius}px)
+    `;
+  });
+
+  function updateActiveCard() {
+    const activeIndex =
+      ((-rotation / step) % total + total) % total;
+
     cards.forEach((card, i) => {
-      const angle = ((360 / total) * (i - current));
-
-      card.style.transform = `
-        translate(-50%, -50%)
-        rotateY(${angle}deg)
-        translateZ(${radius}px)
-      `;
+      card.classList.toggle('active', i === Math.round(activeIndex));
     });
   }
 
   document.getElementById('next').addEventListener('click', () => {
-    current = (current + 1) % total;
-    updateCarousel();
+    rotation -= step;
+    track.style.transform = `rotateY(${rotation}deg)`;
+    updateActiveCard();
   });
 
   document.getElementById('prev').addEventListener('click', () => {
-    current = (current - 1 + total) % total;
-    updateCarousel();
+    rotation += step;
+    track.style.transform = `rotateY(${rotation}deg)`;
+    updateActiveCard();
   });
 
-  updateCarousel();
+  updateActiveCard();
 </script>
 
 

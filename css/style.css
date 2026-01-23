@@ -150,6 +150,10 @@ body {
   transform-style: preserve-3d;
 }
 
+.carousel-track {
+  transition: transform 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
 .carousel-card {
   position: absolute;
   top: 50%;
@@ -179,6 +183,28 @@ body {
   object-fit: cover;
 }
 
+/* modificacion visual del carrusel */
+
+.carousel-card {
+  transition: transform 1s ease, filter 1s ease, opacity 1s ease;
+}
+
+/* Todas las tarjetas (estado normal) */
+.carousel-card img {
+  filter: brightness(0.5);
+  transition: filter 1s ease;
+}
+
+/* Tarjeta activa (central) */
+.carousel-card.active img {
+  filter: brightness(1);
+}
+
+/* Opcional: un poco más grande la central */
+.carousel-card.active {
+  transform: scale(1.1);
+  z-index: 2;
+}
 
 
 
