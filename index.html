@@ -46,7 +46,7 @@
 
         <li class="nav-item ms-lg-3">
           <a class="btn btn-gradient btn-sm rounded-pill px-4"
-             href="../ProyectoLenguajedeMarcas2Evaluacion/paginas/contacto-cuestionario.html">
+             href="paginas/contacto-cuestionario.html">
             Contáctanos
           </a>
         </li>
@@ -164,10 +164,14 @@
 
     <div class="carousel-3d">
       <div class="carousel-track">
-        <div class="carousel-card"><img src="imgs/ferrari.jpg"></div>
-        <div class="carousel-card"><img src="imgs/galeria_ferrari.jpg"></div>
-        <div class="carousel-card"><img src="imgs/nika-qufarashvili-lSTN0nYAUKA-unsplash.jpg"></div>
-        <div class="carousel-card"><img src="imgs/lamborghini.jpg"></div>
+        <div class="carousel-card"><img src="imgs/svj.jpg"></div>
+        <div class="carousel-card"><img src="imgs/porsche.jpg"></div>
+        <div class="carousel-card"><img src="imgs/jesko.jpg"></div>
+        <div class="carousel-card"><img src="imgs/f40.jpg"></div>
+        <div class="carousel-card"><img src="imgs/amg.jpg"></div>
+        <div class="carousel-card"><img src="imgs/"></div>
+
+        
       </div>
     </div>
 
@@ -229,17 +233,19 @@
   </div>
 
   <div class="offcanvas-body">
-    <video id="offcanvasVideo" class="w-100 rounded mb-3" autoplay muted loop playsinline>
-      <source src="" type="video/mp4">
-    </video>
-
+    <!-- Mostrar descripción y especificaciones primero para que el usuario vea la info sin necesidad de bajar -->
     <p id="offcanvasDesc"></p>
     <ul class="list-group list-group-flush mb-3" id="offcanvasSpecs"></ul>
 
-    <a href="paginas/contacto-cuestionario.html"
-       class="btn btn-gradient w-100 rounded-pill">
-      Contactar
-    </a>
+    <!-- Botón Contactar centrado dentro del área de información -->
+    <div class="d-flex justify-content-center mb-3">
+      <a href="paginas/contacto-cuestionario.html" class="btn btn-gradient rounded-pill px-4">Contactar</a>
+    </div>
+
+    <!-- Video a continuación (opcional de ver) -->
+    <video id="offcanvasVideo" class="w-100 rounded mt-2 mb-2" autoplay muted loop playsinline>
+      <source src="" type="video/mp4">
+    </video>
   </div>
 </div>
 
