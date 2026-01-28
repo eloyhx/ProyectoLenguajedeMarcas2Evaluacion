@@ -1,26 +1,21 @@
+/* ====== BASE ====== */
 body {
   background: #000000e3;
   font-family: 'Segoe UI', sans-serif;
 }
 
-.nav-glass {
-  background: rgba(235, 235, 235, 0.1);
-  backdrop-filter: blur(10px);
-}
-
+/* ====== NAVBAR (efecto blur/transparente) ====== */
 .navbar-transparent {
   background: rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 
-
 .navbar-dark .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
   transition: color 0.3s ease;
 }
-
 .navbar-dark .navbar-nav .nav-link:hover {
   color: #ff2bd6;
 }
@@ -30,17 +25,22 @@ body {
   color: #ffffff;
 }
 
+/* ====== IDENTIDAD (degradados) ====== */
 .btn-gradient {
   background: linear-gradient(45deg, #8f00ff, #ff0077);
   color: white;
   border: none;
   transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .btn-gradient:hover {
- color: #ffffff !important;
+  color: #ffffff !important;
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(255, 0, 200, 0.4);
+}
+
+.btn-outline-gradient {
+  border: 1px solid #8f00ff;
+  color: #8f00ff;
 }
 
 .text-gradient {
@@ -51,21 +51,7 @@ body {
   color: transparent;
 }
 
-.navbar-transparent {
-  background: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-
-
-.hero {
-  min-height: 100vh;
-  background: linear-gradient(to right, rgba(10,10,30,.8), rgba(10,10,30,.4)),
-              url("../img/hero.jpg") center/cover no-repeat;
-  padding-top: 120px;
-}
-
+/* ====== HERO ====== */
 .hero-image {
   height: 100vh;
   background: url("../imgs/nika-qufarashvili-lSTN0nYAUKA-unsplash.jpg") center/cover no-repeat;
@@ -87,32 +73,33 @@ body {
   pointer-events: none;
 }
 
-
 @media (max-width: 767px) {
   .hero-image {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
   .hero-image::after { height: 90px; }
-  .section-dark { margin-top: -20px; padding-top: 80px; }
 }
 
+/* ====== CARDS custom ====== */
 .car-card {
   background: #12132b;
   border: none;
   color: white;
 }
-
-.car-card img {
-  height: 220px;
-  object-fit: cover;
-}
+.car-card img,
 .car-card video {
   height: 220px;
   object-fit: cover;
 }
 
+.news-card {
+  background: #12132b;
+  padding: 25px;
+  border-radius: 10px;
+}
 
+/* ====== OFFCANVAS centrado ====== */
 .offcanvas-center {
   top: 50%;
   left: 50%;
@@ -120,27 +107,6 @@ body {
   width: 90%;
   max-width: 600px;
   height: auto;
-  max-height: 55vh;
-  border-radius: 16px;
-}
-
-.offcanvas-center .offcanvas-body {
-  overflow-y: visible;
-  padding: 1rem;
-}
-
-.offcanvas-backdrop {
-  backdrop-filter: blur(6px);
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-
-.offcanvas-center {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) !important;
-  width: 90%;
-  max-width: 600px;
   max-height: 55vh;
   border-radius: 16px;
 }
@@ -158,17 +124,14 @@ body {
   margin-bottom: .4rem;
 }
 
-.offcanvas-center .offcanvas-body p {
-  margin-bottom: .25rem;
-}
-.offcanvas-center .offcanvas-body .list-group {
-  margin-bottom: .4rem;
-}
+.offcanvas-center .offcanvas-body p { margin-bottom: .25rem; }
+.offcanvas-center .offcanvas-body .list-group { margin-bottom: .4rem; }
 .offcanvas-center .offcanvas-body .list-group-item {
   padding-top: .35rem;
   padding-bottom: .35rem;
 }
 
+/* ====== CARRUSEL 3D ====== */
 .carousel-3d {
   position: relative;
   height: 450px;
@@ -177,8 +140,6 @@ body {
   cursor: grab;
   user-select: none;
 }
-
-
 
 .carousel-track {
   position: absolute;
@@ -192,40 +153,21 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-
   width: 280px;
   height: 380px;
-
   border-radius: 16px;
   overflow: hidden;
   background: #000;
   transform-style: preserve-3d;
+  transition: transform 1s ease, opacity 1s ease;
 }
 
 .carousel-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.45) blur(2px);
-  transition: filter 0.6s ease;
-}
-
-.carousel-card.active img {
-  filter: brightness(1) blur(0);
-}
-
-
-.carousel-card {
-  transition: transform 1s ease, filter 1s ease, opacity 1s ease;
-}
-
-.carousel-card img {
   filter: brightness(0.5);
-  transition: filter 1s ease;
-}
-
-.carousel-card.active img {
-  filter: brightness(1);
+  transition: filter 0.6s ease;
 }
 
 .carousel-card.active {
@@ -233,56 +175,12 @@ body {
   z-index: 2;
 }
 
-.carousel-3d {
-  cursor: grab;
-  user-select: none;
+.carousel-card.active img {
+  filter: brightness(1);
 }
 
-.news-card {
-  background: #12132b;
-  padding: 25px;
-  border-radius: 10px;
-}
-
-.btn-gradient {
-  background: linear-gradient(45deg, #8f00ff, #ff0077);
-  color: white;
-  border: none;
-}
-
-.btn-outline-gradient {
-  border: 1px solid #8f00ff;
-  color: #8f00ff;
-}
-
+/* ====== FORM placeholder (mínimo) ====== */
 .form-control::placeholder {
   color: #bfc4c9;
-  opacity: 1; 
-  white-space: pre-wrap; 
-}
-
-.form-control:-ms-input-placeholder { 
-  color: #bfc4c9;
-  white-space: pre-wrap;
-}
-.form-control::-ms-input-placeholder { 
-  color: #bfc4c9;
-  white-space: pre-wrap;
-}
-.form-control::-webkit-input-placeholder { 
-  color: #bfc4c9;
-  white-space: pre-wrap;
-}
-.form-control::-moz-placeholder { 
-  color: #bfc4c9;
   opacity: 1;
-  white-space: pre-wrap;
 }
-
-
-
-
-
-
-
-
