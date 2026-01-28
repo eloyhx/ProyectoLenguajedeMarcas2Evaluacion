@@ -88,14 +88,6 @@ body {
 }
 
 
-
-.section-dark {
-  padding: 80px 0;
-  color: #fff;
-  margin-top: -40px;
-  padding-top: 100px;
-}
-
 @media (max-width: 767px) {
   .hero-image {
     border-bottom-left-radius: 20px;
@@ -103,12 +95,6 @@ body {
   }
   .hero-image::after { height: 90px; }
   .section-dark { margin-top: -20px; padding-top: 80px; }
-}
-
-.section-title {
-  text-align: center;
-  font-weight: bold;
-  position: relative;
 }
 
 .car-card {
@@ -293,11 +279,6 @@ body {
   white-space: pre-wrap;
 }
 
-.footer {
-  padding: 20px;
-  background: #080814;
-  color: #aaa;
-}
 
 
 
