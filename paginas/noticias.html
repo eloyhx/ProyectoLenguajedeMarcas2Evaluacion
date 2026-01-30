@@ -11,12 +11,10 @@
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 
-<body>
-<div class="page-news">
+<body class="text-white">
 
-
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent">
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent py-2">
   <div class="container">
     <a class="navbar-brand fw-bold" href="../index.html">SuperCars</a>
 
@@ -27,9 +25,9 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto align-items-lg-center">
         <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="../paginas/modelos.html">Modelos</a></li>
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="../paginas/noticias.html">Noticias</a></li>
-        <li class="nav-item ms-lg-3">
+        <li class="nav-item"><a class="nav-link" href="modelos.html">Modelos</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Noticias</a></li>
+        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
           <a class="btn btn-gradient btn-sm rounded-pill px-4" href="contacto-cuestionario.html">
             Contáctanos
           </a>
@@ -39,460 +37,172 @@
   </div>
 </nav>
 
-<!-- PORTADA TIPO PERIÓDICO -->
-<section class="py-5 text-white pt-5">
-  <div class="container pt-5">
+<!-- ================= HERO NOTICIAS ================= -->
+<header class="news-hero d-flex align-items-center">
+  <div class="container pb-5">
 
-    <!-- CABECERA “PERIÓDICO” -->
-    <header class="news-card mb-4">
-      <div class="row align-items-center g-3">
-        <div class="col-12 col-lg-4">
-          <div class="d-flex align-items-center gap-3 flex-wrap">
-            <span class="badge rounded-pill text-bg-dark border">Edición</span>
-            <span class="text-white-50 small">Lunes · Enero 2026</span>
-            <span class="text-white-50 small">Valencia</span>
+    <!-- BADGES -->
+    <div class="d-flex gap-2 mb-3 pt-5">
+      <span class="badge rounded-pill text-bg-dark border px-3 py-1 fs-6">Portada</span>
+      <span class="badge rounded-pill text-bg-dark border px-3 py-1 fs-6">Enero 2026</span>
+    </div>
+
+    <!-- TITULAR -->
+    <h1 class="display-5 fw-bold mb-3">
+     Superdeportivos que marcarán tendencia
+     <br>
+      <span class="text-gradient">2026</span>
+    </h1>
+
+    <!-- SUBTÍTULO -->
+    <p class="text-white-75 col-lg-7 mb-4">
+      Híbridos más inteligentes, aerodinámica activa y materiales ultraligeros.
+      Así se está redefiniendo el rendimiento.
+    </p>
+
+    <!-- CTA ÚNICO -->
+    <button
+      class="btn btn-gradient rounded-pill px-4"
+      data-bs-toggle="modal"
+      data-bs-target="#modalNoticia"
+      data-title="Los superdeportivos que marcarán tendencia en 2026"
+      data-date="Enero 2026"
+      data-tag="Portada"
+      data-img="../imgs/ferrari.jpg"
+      data-content="En 2026 veremos una evolución clara: electrificación de apoyo, aerodinámica activa y materiales ultraligeros. El rendimiento ya no depende solo de la potencia."
+    >
+      Leer artículo
+    </button>
+
+  </div>
+</header>
+<section class="py-5 text-white" >
+  <div class="container">
+
+    <h2 class="fw-bold mb-4 text-center">Últimas noticias</h2>
+
+    <div class="row g-3 justify-content-center">
+
+      <!-- NOTICIA 1 -->
+      <div class="col-12">
+        <article class="news-row d-flex flex-column flex-md-row align-items-center gap-4 p-4">
+
+          <img
+            src="../imgs/frenostrack day.jfif"
+            alt="Track day"
+            class="news-row-img">
+
+          <div class="flex-grow-1">
+            <span class="badge rounded-pill text-bg-dark border mb-2">
+              28 de enero de 2026
+            </span>
+
+            <h5 class="fw-bold mb-2">
+              Ferrari presenta su nuevo superdeportivo híbrido
+            </h5>
+
+            <p class="text-white-75 mb-0">
+             Ferrari ha desvelado su último supercoche híbrido, una máquina que combina un motor V8 biturbo con un sistema eléctrico de última generación. El resultado es una potencia brutal, mayor eficiencia y una aceleración que deja sin aliento. Este modelo marca un nuevo paso en la estrategia de electrificación de la marca italiana sin renunciar a su ADN deportivo.
           </div>
-        </div>
 
-        <div class="col-12 col-lg-4 text-center">
-          <h1 class="m-0 fw-bold text-uppercase">
-            SuperCars <span class="text-gradient">Daily</span>
-          </h1>
-          <div class="text-white-50 small">Motor · Tecnología · Eventos · Cultura</div>
-        </div>
-
-        <div class="col-12 col-lg-4">
-          <form class="d-flex gap-2 justify-content-lg-end">
-            <input class="form-control bg-transparent text-white border-secondary" type="search"
-                   placeholder="Buscar noticia..." aria-label="Buscar">
-            <button class="btn btn-outline-gradient rounded-pill px-3" type="button">Buscar</button>
-          </form>
-        </div>
+        </article>
       </div>
 
-      <hr class="border-secondary my-4">
+      <!-- NOTICIA 2 -->
+      <div class="col-12">
+        <article class="news-row d-flex flex-column flex-md-row align-items-center gap-4 p-4">
 
-      <!-- “CINTA” / SUMARIO -->
-      <div class="d-flex flex-wrap gap-2 justify-content-center">
-        <a href="#portada" class="btn btn-outline-gradient btn-sm rounded-pill px-3">Portada</a>
-        <a href="#motor" class="btn btn-outline-gradient btn-sm rounded-pill px-3">Motor</a>
-        <a href="#tecnologia" class="btn btn-outline-gradient btn-sm rounded-pill px-3">Tecnología</a>
-        <a href="#eventos" class="btn btn-outline-gradient btn-sm rounded-pill px-3">Eventos</a>
-        <a href="#opinion" class="btn btn-outline-gradient btn-sm rounded-pill px-3">Opinión</a>
-      </div>
-    </header>
+          <img
+            src="../imgs/bugatti edicion limit.jfif"
+            alt="Bugatti edición limitada"
+            class="news-row-img">
 
-    <!-- PORTADA: 3 COLUMNAS (como periódico) -->
-    <div class="row g-4" id="portada">
+          <div class="flex-grow-1">
+            <span class="badge rounded-pill text-bg-dark border mb-2">
+              : 24 de enero de 2026
+            </span>
 
-      <!-- COLUMNA IZQUIERDA: titulares cortos -->
-      <div class="col-12 col-lg-3">
-        <div class="news-card h-100">
-          <h4 class="fw-bold mb-3">Titulares</h4>
+            <h5 class="fw-bold mb-2">
+              Lamborghini apuesta fuerte por la electrificación
+            </h5>
 
-          <article class="mb-3 pb-3 border-bottom border-secondary">
-            <div class="d-flex justify-content-between align-items-center mb-1">
-              <span class="badge rounded-pill text-bg-dark border">Motor</span>
-              <small class="text-white-50">08:10</small>
-            </div>
-            <h6 class="mb-1 fw-bold">V8 vs V10: lo que nadie te cuenta</h6>
-            <p class="mb-2 text-white-75 small">Peso, respuesta y mantenimiento: diferencias reales.</p>
-            <button class="btn btn-outline-gradient btn-sm rounded-pill"
-              data-bs-toggle="modal" data-bs-target="#modalNoticia"
-              data-title="V8 vs V10: lo que nadie te cuenta"
-              data-date="Enero 2026 · 08:10"
-              data-tag="Motor"
-              data-img="../imgs/lamborghini.jpg"
-              data-content="Comparativa clara: el V8 suele ser más compacto y eficiente; el V10 destaca por su carácter y rango de revoluciones. Te explicamos pros y contras según uso real.">
-              Leer →
-            </button>
-          </article>
-
-          <article class="mb-3 pb-3 border-bottom border-secondary">
-            <div class="d-flex justify-content-between align-items-center mb-1">
-              <span class="badge rounded-pill text-bg-dark border">Tecnología</span>
-              <small class="text-white-50">09:05</small>
-            </div>
-            <h6 class="mb-1 fw-bold">Aerodinámica activa: cómo funciona</h6>
-            <p class="mb-2 text-white-75 small">Flaps, alerones y control electrónico en tiempo real.</p>
-            <button class="btn btn-outline-gradient btn-sm rounded-pill"
-              data-bs-toggle="modal" data-bs-target="#modalNoticia"
-              data-title="Aerodinámica activa: cómo funciona"
-              data-date="Enero 2026 · 09:05"
-              data-tag="Tecnología"
-              data-img="../imgs/galeria_ferrari.jpg"
-              data-content="La aerodinámica activa adapta la carga según frenada, curva y aceleración. Resultado: más estabilidad y mejor rendimiento sin penalizar siempre la velocidad punta.">
-              Leer →
-            </button>
-          </article>
-
-          <article>
-            <div class="d-flex justify-content-between align-items-center mb-1">
-              <span class="badge rounded-pill text-bg-dark border">Eventos</span>
-              <small class="text-white-50">10:20</small>
-            </div>
-            <h6 class="mb-1 fw-bold">Track days: guía rápida para empezar</h6>
-            <p class="mb-2 text-white-75 small">Qué llevar, cómo preparar el coche y normas básicas.</p>
-            <button class="btn btn-outline-gradient btn-sm rounded-pill"
-              data-bs-toggle="modal" data-bs-target="#modalNoticia"
-              data-title="Track days: guía rápida para empezar"
-              data-date="Enero 2026 · 10:20"
-              data-tag="Eventos"
-              data-img="../imgs/nika-qufarashvili-lSTN0nYAUKA-unsplash.jpg"
-              data-content="Antes de rodar: presiones, líquidos, pastillas, casco y briefing. Te damos un checklist sencillo para disfrutar con seguridad.">
-              Leer →
-            </button>
-          </article>
-        </div>
-      </div>
-
-      <!-- COLUMNA CENTRAL: noticia principal (gran titular + imagen) -->
-      <div class="col-12 col-lg-6">
-        <div class="card bg-dark text-white border-0 overflow-hidden shadow-lg h-100">
-          <img src="../imgs/carreragt.jpg" class="img-fluid" alt="Portada principal">
-          <div class="p-4">
-            <div class="d-flex flex-wrap gap-2 align-items-center mb-2">
-              <span class="badge rounded-pill text-bg-dark border">Portada</span>
-              <span class="badge rounded-pill text-bg-dark border">Especial 2026</span>
-              <small class="text-white-50">Enero 2026</small>
-            </div>
-
-            <h2 class="fw-bold mb-2">Los superdeportivos que marcarán tendencia en 2026</h2>
-            <p class="text-white-75 mb-4">
-              Híbridos más inteligentes, aerodinámica activa y materiales ultraligeros.
-              Así se está redefiniendo el rendimiento.
+            <p class="text-white-75 mb-0">
+              las ediciones limitadas de supercoches pueden ser una inversión real pero solo si cumples con varios requisitos de rareza, marca, preservación y estrategia. No todas las ediciones limitadas garantizan retornos, y los costes asociados pueden ser altos.
             </p>
-
-            <div class="d-flex flex-wrap gap-2">
-              <button class="btn btn-gradient rounded-pill px-4"
-                data-bs-toggle="modal" data-bs-target="#modalNoticia"
-                data-title="Los superdeportivos que marcarán tendencia en 2026"
-                data-date="Enero 2026"
-                data-tag="Portada"
-                data-img="../imgs/ferrari.jpg"
-                data-content="En 2026 veremos una evolución clara: electrificación de apoyo (más par y eficiencia), control aerodinámico avanzado y mejoras en refrigeración. También sube la telemetría y el enfoque 'track ready' de fábrica.">
-                Leer artículo completo
-              </button>
-
-              <a class="btn btn-outline-gradient rounded-pill px-4"
-                 href="paginas/contacto-cuestionario.html">
-                Enviar noticia
-              </a>
-            </div>
           </div>
-        </div>
+
+        </article>
       </div>
 
-      <!-- COLUMNA DERECHA: “lo más leído” + mini tarjetas -->
-      <div class="col-12 col-lg-3">
-        <div class="news-card h-100">
-          <h4 class="fw-bold mb-3">Lo más leído</h4>
+      <!-- NOTICIA 3 -->
+      <div class="col-12">
+        <article class="news-row d-flex flex-column flex-md-row align-items-center  gap-4 p-4">
 
-          <div class="mb-3 pb-3 border-bottom border-secondary">
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="badge rounded-pill text-bg-dark border">Opinión</span>
-              <small class="text-white-50">5 min</small>
-            </div>
-            <h6 class="fw-bold mb-1">¿Se está perdiendo el “alma” del motor?</h6>
-            <p class="text-white-75 small mb-2">Electrificación vs emoción: un debate abierto.</p>
-            <button class="btn btn-outline-gradient btn-sm rounded-pill"
-              data-bs-toggle="modal" data-bs-target="#modalNoticia"
-              data-title="¿Se está perdiendo el “alma” del motor?"
-              data-date="Enero 2026"
-              data-tag="Opinión"
-              data-img="../imgs/lamborghini.jpg"
-              data-content="¿Puede un coche moderno emocionarte igual? Analizamos sonido, tacto y sensaciones, y por qué algunos fabricantes están buscando nuevas formas de 'carácter'.">
-              Leer →
-            </button>
-          </div>
+          <img
+            src="../imgs/nika-qufarashvili-lSTN0nYAUKA-unsplash.jpg"
+            alt="Tecnología Ferrari"
+            class="news-row-img">
 
-          <div class="mb-3 pb-3 border-bottom border-secondary">
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="badge rounded-pill text-bg-dark border">Tecnología</span>
-              <small class="text-white-50">4 min</small>
-            </div>
-            <h6 class="fw-bold mb-1">Neumáticos: el “upgrade” más infravalorado</h6>
-            <p class="text-white-75 small mb-2">Agarre, frenada y seguridad cambian más de lo que crees.</p>
-            <button class="btn btn-outline-gradient btn-sm rounded-pill"
-              data-bs-toggle="modal" data-bs-target="#modalNoticia"
-              data-title="Neumáticos: el “upgrade” más infravalorado"
-              data-date="Enero 2026"
-              data-tag="Tecnología"
-              data-img="../imgs/nika-qufarashvili-lSTN0nYAUKA-unsplash.jpg"
-              data-content="Los neumáticos determinan gran parte del rendimiento: compuestos, temperatura y presión. Te contamos cómo elegir según tu uso y clima.">
-              Leer →
-            </button>
-          </div>
+          <div class="flex-grow-1">
+            <span class="badge rounded-pill text-bg-dark border mb-2">
+              20 de enero de 2026
+            </span>
 
-          <div>
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="badge rounded-pill text-bg-dark border">Motor</span>
-              <small class="text-white-50">3 min</small>
-            </div>
-            <h6 class="fw-bold mb-1">V12: por qué sigue siendo un icono</h6>
-            <p class="text-white-75 small mb-2">Potencia lineal, suavidad… y una experiencia única.</p>
-            <button class="btn btn-outline-gradient btn-sm rounded-pill"
-              data-bs-toggle="modal" data-bs-target="#modalNoticia"
-              data-title="V12: por qué sigue siendo un icono"
-              data-date="Enero 2026"
-              data-tag="Motor"
-              data-img="../imgs/ferrari.jpg"
-              data-content="Aunque la industria cambia, el V12 aún representa exclusividad. Revisamos cómo han mejorado eficiencia y fiabilidad en los últimos años.">
-              Leer →
-            </button>
-          </div>
-        </div>
-      </div>
+            <h5 class="fw-bold mb-2">
+             Bugatti rompe récords en circuito
+            </h5>
 
-    </div>
-
-    <!-- SECCIONES “PERIÓDICO”: filas de 3 noticias por categoría -->
-    <div class="mt-5" id="motor">
-      <h2 class="section-title mb-4">SECCIÓN · MOTOR</h2>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <div class="news-card h-100">
-            <span class="badge rounded-pill text-bg-dark border">Motor</span>
-            <h5 class="mt-2 fw-bold">Cómo preparar frenos para un track day</h5>
-            <p class="text-white-75">Pastillas, líquidos y temperaturas: evita el “fading”.</p>
-            <button class="btn btn-outline-gradient btn-sm rounded-pill"
-              data-bs-toggle="modal" data-bs-target="#modalNoticia"
-              data-title="Cómo preparar frenos para un track day"
-              data-date="Enero 2026"
-              data-tag="Motor"
-              data-img="../imgs/frenostrack day.jfif"
-              data-content="Para circuito: líquido de frenos de mayor punto de ebullición, pastillas adecuadas y refrigeración. Te damos un checklist básico.">
-              Leer →
-            </button>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="news-card h-100">
-            <span class="badge rounded-pill text-bg-dark border">Motor</span>
-            <h5 class="mt-2 fw-bold">Ediciones limitadas: ¿inversión o capricho?</h5>
-            <p class="text-white-75">Qué mirar antes de comprar un modelo “rare”.</p>
-            <button class="btn btn-outline-gradient btn-sm rounded-pill"
-              data-bs-toggle="modal" data-bs-target="#modalNoticia"
-              data-title="Ediciones limitadas: ¿inversión o capricho?"
-              data-date="Enero 2026"
-              data-tag="Motor"
-              data-img="../imgs/bugatti edicion limit.jfif"
-              data-content="No todo sube de valor: historial, unidades, demanda y mantenimiento importan. Te explicamos las señales típicas de una compra inteligente.">
-              Leer →
-            </button>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="news-card h-100">
-            <span class="badge rounded-pill text-bg-dark border">Motor</span>
-            <h5 class="mt-2 fw-bold">Sonido y normativa: el futuro del escape</h5>
-            <p class="text-white-75">Cómo están cambiando los sistemas de escape modernos.</p>
-            <button class="btn btn-outline-gradient btn-sm rounded-pill"
-              data-bs-toggle="modal" data-bs-target="#modalNoticia"
-              data-title="Sonido y normativa: el futuro del escape"
-              data-date="Enero 2026"
-              data-tag="Motor"
-              data-img="../imgs/ferrari.jpg"
-              data-content="Entre normas y tecnología, aparecen válvulas inteligentes, resonadores y soluciones para mantener carácter sin exceder límites.">
-              Leer →
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mt-5" id="tecnologia">
-      <h2 class="section-title mb-4">SECCIÓN · TECNOLOGÍA</h2>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <div class="news-card h-100">
-            <span class="badge rounded-pill text-bg-dark border">Tecnología</span>
-            <h5 class="mt-2 fw-bold">Telemetría: datos para conducir mejor</h5>
-            <p class="text-white-75">Qué medir y cómo interpretarlo sin volverte loco.</p>
-            <button class="btn btn-outline-gradient btn-sm rounded-pill"
-              data-bs-toggle="modal" data-bs-target="#modalNoticia"
-              data-title="Telemetría: datos para conducir mejor"
-              data-date="Enero 2026"
-              data-tag="Tecnología"
-              data-img="../imgs/galeria_ferrari.jpg"
-              data-content="Tiempos, frenada, aceleración lateral y temperatura: con 4-5 métricas ya puedes mejorar mucho tu conducción.">
-              Leer →
-            </button>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="news-card h-100">
-            <span class="badge rounded-pill text-bg-dark border">Tecnología</span>
-            <h5 class="mt-2 fw-bold">Híbridos: por qué ahora son más rápidos</h5>
-            <p class="text-white-75">No es “solo consumo”: es par instantáneo y tracción.</p>
-            <button class="btn btn-outline-gradient btn-sm rounded-pill"
-              data-bs-toggle="modal" data-bs-target="#modalNoticia"
-              data-title="Híbridos: por qué ahora son más rápidos"
-              data-date="Enero 2026"
-              data-tag="Tecnología"
-              data-img="../imgs/lamborghini.jpg"
-              data-content="El motor eléctrico ayuda en salida de curva y reduce el lag. Además permite estrategias de tracción y reparto de potencia más precisas.">
-              Leer →
-            </button>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="news-card h-100">
-            <span class="badge rounded-pill text-bg-dark border">Tecnología</span>
-            <h5 class="mt-2 fw-bold">Materiales: carbono, titanio y más</h5>
-            <p class="text-white-75">Menos peso = más todo (frenada, giro, aceleración).</p>
-            <button class="btn btn-outline-gradient btn-sm rounded-pill"
-              data-bs-toggle="modal" data-bs-target="#modalNoticia"
-              data-title="Materiales: carbono, titanio y más"
-              data-date="Enero 2026"
-              data-tag="Tecnología"
-              data-img="../imgs/ferrari materiales.jfif"
-              data-content="El peso afecta a todo. Los fabricantes combinan carbono y aleaciones avanzadas con nuevas técnicas de fabricación para rigidez y ligereza.">
-              Leer →
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mt-5" id="eventos">
-      <h2 class="section-title mb-4">SECCIÓN · EVENTOS</h2>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <div class="news-card h-100">
-            <span class="badge rounded-pill text-bg-dark border">Eventos</span>
-            <h5 class="mt-2 fw-bold">Cómo es una experiencia VIP en circuito</h5>
-            <p class="text-white-75">Boxes, coaching y sesiones privadas: así se vive.</p>
-            <button class="btn btn-outline-gradient btn-sm rounded-pill"
-              data-bs-toggle="modal" data-bs-target="#modalNoticia"
-              data-title="Cómo es una experiencia VIP en circuito"
-              data-date="Enero 2026"
-              data-tag="Eventos"
-              data-img="../imgs/monaco.jfif"
-              data-content="Las experiencias VIP incluyen briefing, control de tiempos y soporte técnico. Ideal si quieres disfrutar sin preocuparte por detalles.">
-              Leer →
-            </button>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="news-card h-100">
-            <span class="badge rounded-pill text-bg-dark border">Eventos</span>
-            <h5 class="mt-2 fw-bold">Rutas premium: consejos para organizar una</h5>
-            <p class="text-white-75">Planificación, paradas, seguridad y conducción en grupo.</p>
-            <button class="btn btn-outline-gradient btn-sm rounded-pill"
-              data-bs-toggle="modal" data-bs-target="#modalNoticia"
-              data-title="Rutas premium: consejos para organizar una"
-              data-date="Enero 2026"
-              data-tag="Eventos"
-              data-img="../imgs/quedadas_coche.jfif"
-              data-content="Define ritmo, puntos de reagrupación, comunicación y normas de adelantamiento. Una ruta buena es segura y fluida.">
-              Leer →
-            </button>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="news-card h-100">
-            <span class="badge rounded-pill text-bg-dark border">Eventos</span>
-            <h5 class="mt-2 fw-bold">Checklist antes de viajar con tu deportivo</h5>
-            <p class="text-white-75">Presiones, líquidos, kit básico y planificación de gasolina.</p>
-            <button class="btn btn-outline-gradient btn-sm rounded-pill"
-              data-bs-toggle="modal" data-bs-target="#modalNoticia"
-              data-title="Checklist antes de viajar con tu deportivo"
-              data-date="Enero 2026"
-              data-tag="Eventos"
-              data-img="../imgs/bmwm4Repair.jfif"
-              data-content="Para viajes: revisa presiones, estado de neumáticos, niveles, kit antipinchazos y calcula paradas. Más simple de lo que parece.">
-              Leer →
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mt-5" id="opinion">
-      <h2 class="text-center fw-bold mb-4">SECCIÓN · OPINIÓN</h2>
-      <div class="row g-4">
-        <div class="col-lg-8">
-          <div class="news-card h-100">
-            <span class="badge rounded-pill text-bg-dark border">Opinión</span>
-            <h3 class="mt-2 fw-bold">El futuro del “placer de conducción”</h3>
-            <p class="text-white-75">
-              No todo es potencia. El tacto, la respuesta y la conexión con el coche siguen importando.
-              ¿Cómo lo mantendrán las marcas en los próximos años?
+            <p class="text-white-75 mb-0">
+             Un nuevo Bugatti ha conseguido marcar un tiempo récord en circuito, consolidándose como uno de los supercoches más rápidos jamás creados. Con una aerodinámica mejorada y una potencia superior a los 1.500 CV, este modelo redefine los límites del rendimiento.
             </p>
-            <button class="btn btn-gradient rounded-pill px-4"
-              data-bs-toggle="modal" data-bs-target="#modalNoticia"
-              data-title="El futuro del “placer de conducción”"
-              data-date="Enero 2026"
-              data-tag="Opinión"
-              data-img="../imgs/galeria_ferrari.jpg"
-              data-content="El placer de conducción puede venir de la precisión, del feedback del volante, del sonido o incluso del diseño de la experiencia. La clave será no hacer coches 'perfectos' pero aburridos.">
-              Leer columna
-            </button>
           </div>
-        </div>
 
-        <div class="col-lg-4">
-          <div class="news-card h-100 text-center">
-            <h5 class="fw-bold">¿Quieres salir en portada?</h5>
-            <p class="text-white-75">Envíanos una noticia o evento y lo publicamos.</p>
-            <a class="btn btn-outline-gradient rounded-pill w-100"
-               href="paginas/contacto-cuestionario.html">
-              Enviar contenido
-            </a>
-          </div>
-        </div>
+        </article>
       </div>
-    </div>
 
+    </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+
+
+
+<!-- ================= FOOTER ================= -->
 <footer class="footer text-center">
-  <p>© 2026 SuperCars · Todos los derechos reservados</p>
+  © 2026 SuperCars · Todos los derechos reservados
 </footer>
 
-<!-- MODAL LEER MÁS -->
+<!-- ================= MODAL ================= -->
 <div class="modal fade" id="modalNoticia" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content bg-dark text-white border-secondary">
       <div class="modal-header border-secondary">
         <div>
-          <h5 class="modal-title fw-bold" id="modalTitle">Título</h5>
-          <div class="d-flex flex-wrap gap-2 align-items-center mt-1">
-            <span class="badge rounded-pill text-bg-dark border" id="modalTag">Etiqueta</span>
-            <small class="text-white-50" id="modalDate">Fecha</small>
-          </div>
+          <h5 class="modal-title fw-bold" id="modalTitle"></h5>
+          <small class="text-white-50" id="modalDate"></small>
         </div>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
 
       <div class="modal-body">
-        <img id="modalImg" src="" class="img-fluid rounded mb-3" alt="Imagen noticia">
-        <p id="modalContent" class="mb-0"></p>
-      </div>
-
-      <div class="modal-footer border-secondary">
-        <a href="paginas/contacto-cuestionario.html"
-           class="btn btn-outline-gradient rounded-pill">
-          Pedir más info
-        </a>
-        <button type="button" class="btn btn-gradient rounded-pill" data-bs-dismiss="modal">
-          Cerrar
-        </button>
+        <img id="modalImg" class="img-fluid rounded mb-3" alt="">
+        <p id="modalContent"></p>
       </div>
     </div>
   </div>
 </div>
-<!-- JS Bootstrap + Modal -->
+
+<script>
+  const modal = document.getElementById("modalNoticia");
+  modal.addEventListener("show.bs.modal", (event) => {
+    const btn = event.relatedTarget;
+    document.getElementById("modalTitle").textContent = btn.dataset.title;
+    document.getElementById("modalDate").textContent = btn.dataset.date;
+    document.getElementById("modalImg").src = btn.dataset.img;
+    document.getElementById("modalContent").textContent = btn.dataset.content;
+  });
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</div>
 </body>
 </html>

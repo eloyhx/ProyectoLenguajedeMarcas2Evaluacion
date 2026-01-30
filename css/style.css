@@ -267,3 +267,123 @@ body {
   object-position: center 62%;
 }
 
+/* apartado noticias /*
+/* ===== NOTICIAS (mínimo) ===== */
+.news-hero{
+  min-height: 90vh;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.15), rgba(0,0,0,.7)),
+    url("../imgs/koenigsegg-modelos.jpg") center/cover no-repeat;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.news-tile{
+  background: #12132b;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: .2s;
+}
+
+.news-tile:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+
+.news-tile{
+  background: #12132b;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.news-tile img{
+  height: 210px;
+  object-fit: cover;
+}
+
+
+.news-panel{
+  background: rgba(18,19,43,.9);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+/* ===== NOTICIAS EN TIRAS ===== */
+.news-row {
+  background: #000000e3;
+  border-radius: 16px;
+}
+
+.news-row-img {
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.section-band{
+  background: #000000e3;
+  border-top: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+
+.news-row-img{
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+
+
+/* ====== CARRUSEL 3D ====== */
+.carousel-3d {
+  position: relative;
+  height: 450px;
+  perspective: 1400px;
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel-track {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.carousel-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 280px;
+  height: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+  transform-style: preserve-3d;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+  transition: filter 0.6s ease;
+}
+
+.carousel-card.active {
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+.carousel-card.active img {
+  filter: brightness(1);
+}
