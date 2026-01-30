@@ -1,208 +1,243 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SuperCars · Noticias</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SuperCars · Noticias</title>
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Tu CSS -->
-  <link rel="stylesheet" href="../css/style.css" />
-</head>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Tu CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
 
-<body class="text-white">
-
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent py-2">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="../index.html">SuperCars</a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto align-items-lg-center">
-        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="modelos.html">Modelos</a></li>
-        <li class="nav-item"><a class="nav-link active" href="#">Noticias</a></li>
-        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-          <a class="btn btn-gradient btn-sm rounded-pill px-4" href="contacto-cuestionario.html">
-            Contáctanos
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- ================= HERO NOTICIAS ================= -->
-<header class="news-hero d-flex align-items-center">
-  <div class="container pb-5">
-
-    <!-- BADGES -->
-    <div class="d-flex gap-2 mb-3 pt-5">
-      <span class="badge rounded-pill text-bg-dark border px-3 py-1 fs-6">Portada</span>
-      <span class="badge rounded-pill text-bg-dark border px-3 py-1 fs-6">Enero 2026</span>
-    </div>
-
-    <!-- TITULAR -->
-    <h1 class="display-5 fw-bold mb-3">
-     Superdeportivos que marcarán tendencia
-     <br>
-      <span class="text-gradient">2026</span>
-    </h1>
-
-    <!-- SUBTÍTULO -->
-    <p class="text-white-75 col-lg-7 mb-4">
-      Híbridos más inteligentes, aerodinámica activa y materiales ultraligeros.
-      Así se está redefiniendo el rendimiento.
-    </p>
-
-    <!-- CTA ÚNICO -->
-    <button
-      class="btn btn-gradient rounded-pill px-4"
-      data-bs-toggle="modal"
-      data-bs-target="#modalNoticia"
-      data-title="Los superdeportivos que marcarán tendencia en 2026"
-      data-date="Enero 2026"
-      data-tag="Portada"
-      data-img="../imgs/ferrari.jpg"
-      data-content="En 2026 veremos una evolución clara: electrificación de apoyo, aerodinámica activa y materiales ultraligeros. El rendimiento ya no depende solo de la potencia."
+  <body class="text-white">
+    <!-- ================= NAVBAR ================= -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent py-2"
     >
-      Leer artículo
-    </button>
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">SuperCars</a>
 
-  </div>
-</header>
-<section class="py-5 text-white" >
-  <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <h2 class="fw-bold mb-4 text-center">Últimas noticias</h2>
-
-    <div class="row g-3 justify-content-center">
-
-      <!-- NOTICIA 1 -->
-      <div class="col-12">
-        <article class="news-row d-flex flex-column flex-md-row align-items-center gap-4 p-4">
-
-          <img
-            src="../imgs/frenostrack day.jfif"
-            alt="Track day"
-            class="news-row-img">
-
-          <div class="flex-grow-1">
-            <span class="badge rounded-pill text-bg-dark border mb-2">
-              28 de enero de 2026
-            </span>
-
-            <h5 class="fw-bold mb-2">
-              Ferrari presenta su nuevo superdeportivo híbrido
-            </h5>
-
-            <p class="text-white-75 mb-0">
-             Ferrari ha desvelado su último supercoche híbrido, una máquina que combina un motor V8 biturbo con un sistema eléctrico de última generación. El resultado es una potencia brutal, mayor eficiencia y una aceleración que deja sin aliento. Este modelo marca un nuevo paso en la estrategia de electrificación de la marca italiana sin renunciar a su ADN deportivo.
-          </div>
-
-        </article>
-      </div>
-
-      <!-- NOTICIA 2 -->
-      <div class="col-12">
-        <article class="news-row d-flex flex-column flex-md-row align-items-center gap-4 p-4">
-
-          <img
-            src="../imgs/bugatti edicion limit.jfif"
-            alt="Bugatti edición limitada"
-            class="news-row-img">
-
-          <div class="flex-grow-1">
-            <span class="badge rounded-pill text-bg-dark border mb-2">
-              : 24 de enero de 2026
-            </span>
-
-            <h5 class="fw-bold mb-2">
-              Lamborghini apuesta fuerte por la electrificación
-            </h5>
-
-            <p class="text-white-75 mb-0">
-              las ediciones limitadas de supercoches pueden ser una inversión real pero solo si cumples con varios requisitos de rareza, marca, preservación y estrategia. No todas las ediciones limitadas garantizan retornos, y los costes asociados pueden ser altos.
-            </p>
-          </div>
-
-        </article>
-      </div>
-
-      <!-- NOTICIA 3 -->
-      <div class="col-12">
-        <article class="news-row d-flex flex-column flex-md-row align-items-center  gap-4 p-4">
-
-          <img
-            src="../imgs/nika-qufarashvili-lSTN0nYAUKA-unsplash.jpg"
-            alt="Tecnología Ferrari"
-            class="news-row-img">
-
-          <div class="flex-grow-1">
-            <span class="badge rounded-pill text-bg-dark border mb-2">
-              20 de enero de 2026
-            </span>
-
-            <h5 class="fw-bold mb-2">
-             Bugatti rompe récords en circuito
-            </h5>
-
-            <p class="text-white-75 mb-0">
-             Un nuevo Bugatti ha conseguido marcar un tiempo récord en circuito, consolidándose como uno de los supercoches más rápidos jamás creados. Con una aerodinámica mejorada y una potencia superior a los 1.500 CV, este modelo redefine los límites del rendimiento.
-            </p>
-          </div>
-
-        </article>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- ================= FOOTER ================= -->
-<footer class="footer text-center">
-  © 2026 SuperCars · Todos los derechos reservados
-</footer>
-
-<!-- ================= MODAL ================= -->
-<div class="modal fade" id="modalNoticia" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content bg-dark text-white border-secondary">
-      <div class="modal-header border-secondary">
-        <div>
-          <h5 class="modal-title fw-bold" id="modalTitle"></h5>
-          <small class="text-white-50" id="modalDate"></small>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="modelos.html">Modelos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Noticias</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <a
+                class="btn btn-gradient btn-sm rounded-pill px-4"
+                href="contacto-cuestionario.html"
+              >
+                Contáctanos
+              </a>
+            </li>
+          </ul>
         </div>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
+    </nav>
 
-      <div class="modal-body">
-        <img id="modalImg" class="img-fluid rounded mb-3" alt="">
-        <p id="modalContent"></p>
+    <!-- ================= HERO NOTICIAS ================= -->
+    <header class="news-hero d-flex align-items-center">
+      <div class="container pb-5">
+        <!-- BADGES -->
+        <div class="d-flex gap-2 mb-3 pt-5">
+          <span class="badge rounded-pill text-bg-dark border px-3 py-1 fs-6"
+            >Portada</span
+          >
+          <span class="badge rounded-pill text-bg-dark border px-3 py-1 fs-6"
+            >Enero 2026</span
+          >
+        </div>
+
+        <!-- TITULAR -->
+        <h1 class="display-5 fw-bold mb-3">
+          Superdeportivos que marcarán tendencia
+          <br />
+          <span class="text-gradient">2026</span>
+        </h1>
+
+        <!-- SUBTÍTULO -->
+        <p class="text-white-75 col-lg-7 mb-4">
+          Híbridos más inteligentes, aerodinámica activa y materiales
+          ultraligeros. Así se está redefiniendo el rendimiento.
+        </p>
+
+        <!-- CTA ÚNICO -->
+        <button
+          class="btn btn-gradient rounded-pill px-4"
+          data-bs-toggle="modal"
+          data-bs-target="#modalNoticia"
+          data-title="Los superdeportivos que marcarán tendencia en 2026"
+          data-date="Enero 2026"
+          data-tag="Portada"
+          data-img="../imgs/ferrari.jpg"
+          data-content="En 2026 veremos una evolución clara: electrificación de apoyo, aerodinámica activa y materiales ultraligeros. El rendimiento ya no depende solo de la potencia."
+        >
+          Leer artículo
+        </button>
+      </div>
+    </header>
+    <section class="py-5 text-white">
+      <div class="container">
+        <h2 class="fw-bold mb-4 text-center">Últimas noticias</h2>
+
+        <div class="row g-3 justify-content-center">
+          <!-- NOTICIA 1 -->
+          <div class="col-12">
+            <article
+              class="news-row d-flex flex-column flex-md-row align-items-center gap-4 p-4"
+            >
+              <img
+                src="../imgs/frenostrack day.jfif"
+                alt="Track day"
+                class="news-row-img"
+              />
+
+              <div class="flex-grow-1">
+                <span class="badge rounded-pill text-bg-dark border mb-2">
+                  28 de enero de 2026
+                </span>
+
+                <h5 class="fw-bold mb-2">
+                  Ferrari presenta su nuevo superdeportivo de 840 CV
+                </h5>
+
+                <p class="text-white-75 mb-0">
+                  Ferrari ha desvelado su último supercoche, el Ferrari Daytona SP3, una máquina
+                  que combina un motor V12 atmosférico con un sistema eléctrico de
+                  última generación. El resultado es una potencia brutal, mayor
+                  eficiencia y una aceleración que deja sin aliento. Este modelo
+                  marca un nuevo paso en la estrategia de electrificación de la
+                  marca italiana sin renunciar a su ADN deportivo.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <!-- NOTICIA 2 -->
+          <div class="col-12">
+            <article
+              class="news-row d-flex flex-column flex-md-row align-items-center gap-4 p-4"
+            >
+              <img
+                src="../imgs/bugatti edicion limit.jfif"
+                alt="Bugatti edición limitada"
+                class="news-row-img"
+              />
+
+              <div class="flex-grow-1">
+                <span class="badge rounded-pill text-bg-dark border mb-2">
+                  : 24 de enero de 2026
+                </span>
+
+                <h5 class="fw-bold mb-2">
+                  Lamborghini apuesta fuerte por la electrificación
+                </h5>
+
+                <p class="text-white-75 mb-0">
+                  las ediciones limitadas de supercoches pueden ser una
+                  inversión real pero solo si cumples con varios requisitos de
+                  rareza, marca, preservación y estrategia. No todas las
+                  ediciones limitadas garantizan retornos, y los costes
+                  asociados pueden ser altos.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <!-- NOTICIA 3 -->
+          <div class="col-12">
+            <article
+              class="news-row d-flex flex-column flex-md-row align-items-center gap-4 p-4"
+            >
+              <img
+                src="../imgs/projectOne.jpg"
+                alt="Tecnología Ferrari"
+                class="news-row-img news-img-top"
+              />
+
+              <div class="flex-grow-1">
+                <span class="badge rounded-pill text-bg-dark border mb-2">
+                  20 de enero de 2026
+                </span>
+
+                <h5 class="fw-bold mb-2">
+                  Mercedes AMG Project One rompe el récord absoluto en
+                  Nürburgring
+                </h5>
+
+                <p class="text-white-75 mb-0">
+                  La marca alemana vuelve a dominar el Infierno Verde con un
+                  tiempo histórico. Más potencia, menos peso y una puesta a
+                  punto extrema para circuito.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer text-center">
+      © 2026 SuperCars · Todos los derechos reservados
+    </footer>
+
+    <!-- ================= MODAL ================= -->
+    <div class="modal fade" id="modalNoticia" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-white border-secondary">
+          <div class="modal-header border-secondary">
+            <div>
+              <h5 class="modal-title fw-bold" id="modalTitle"></h5>
+              <small class="text-white-50" id="modalDate"></small>
+            </div>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <img id="modalImg" class="img-fluid rounded mb-3" alt="" />
+            <p id="modalContent"></p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<script>
-  const modal = document.getElementById("modalNoticia");
-  modal.addEventListener("show.bs.modal", (event) => {
-    const btn = event.relatedTarget;
-    document.getElementById("modalTitle").textContent = btn.dataset.title;
-    document.getElementById("modalDate").textContent = btn.dataset.date;
-    document.getElementById("modalImg").src = btn.dataset.img;
-    document.getElementById("modalContent").textContent = btn.dataset.content;
-  });
-</script>
+    <script>
+      const modal = document.getElementById("modalNoticia");
+      modal.addEventListener("show.bs.modal", (event) => {
+        const btn = event.relatedTarget;
+        document.getElementById("modalTitle").textContent = btn.dataset.title;
+        document.getElementById("modalDate").textContent = btn.dataset.date;
+        document.getElementById("modalImg").src = btn.dataset.img;
+        document.getElementById("modalContent").textContent =
+          btn.dataset.content;
+      });
+    </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
