@@ -190,3 +190,68 @@ body {
   background: #080814;
   color: #aaa;
 }
+
+/* modelos /*
+/* ===== NAV SEARCH ===== */
+.nav-search {
+  width: 100%;
+  max-width: 520px;
+}
+
+.nav-search-input {
+  height: 40px;
+  padding-left: 44px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  color: #fff;
+}
+
+.nav-search-input::placeholder {
+  color: #fff;
+}
+
+.nav-search-input:focus {
+  background: rgba(255,255,255,.18);
+}
+
+
+/* modelos /*
+/* ================= HERO ================= */
+.hero-modelos{
+  min-height: 90vh;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.65), rgba(10,10,15,.85)),
+    url("../imgs/porsche-911-gt2-modelos.jpg") center/cover no-repeat;
+  border-radius: 30px;
+}
+
+/* ================= MARCAS ================= */
+.brand-card:hover{
+  transform: translateY(-4px);
+  border-color: #a855f7;
+}
+
+.brand-card img{
+  max-height: 40px;
+  filter: brightness(0) invert(1);
+}
+
+/* ================= MODELOS ================= */
+.car-card{
+  background: #141414;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.car-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.6);
+}
+
+.car-card img{
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  object-position: center 62%;
+}
+
