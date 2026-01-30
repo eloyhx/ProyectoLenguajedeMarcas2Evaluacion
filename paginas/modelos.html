@@ -10,163 +10,63 @@
 
   <!-- TU CSS -->
   <link rel="stylesheet" href="../css/style.css">
-
-  <style>
-    /* ================= HERO ================= */
-    .hero-modelos{
-      min-height: 90vh;
-      background:
-        linear-gradient(to bottom, rgba(0,0,0,.75), rgba(10,10,15,.95)),
-        url("../imgs/porsche2.jpg") center/cover no-repeat;
-      display:flex;
-      align-items:center;
-      border-radius: 30px;
-    }
-
-    .filter-box{
-      background: rgba(20,20,25,.9);
-      backdrop-filter: blur(8px);
-      border-radius:18px;
-      padding:25px;
-      box-shadow:0 10px 35px rgba(0,0,0,.6);
-    }
-
-    /* ================= LOGOS ================= */
-    .brand-card{
-      background:#ffffff;
-      border:1px solid #2a2a2a;
-      border-radius:14px;
-      padding:18px;
-      transition:.25s;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      height:90px;
-    }
-
-    .brand-card:hover{
-      transform:translateY(-4px);
-      border-color:#a855f7;
-    }
-
-    .brand-card img{
-      max-height:40px;
-      opacity:.9;
-    }
-
-    /* ================= CARDS ================= */
-    .car-card{
-      background:#141414;
-      border-radius:18px;
-      overflow:hidden;
-      transition:.25s;
-    }
-
-    .car-cardurCard:hover{
-      transform:translateY(-6px);
-      box-shadow:0 10px 30px rgba(0,0,0,.6);
-    }
-
-    .car-card img{
-  width: 100%;
-  aspect-ratio: 21 / 9;
-  object-fit: cover;
-  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
-  /* 👇 CLAVE */
-  object-position: center 62%;
-}
-
-
-
-
-  </style>
 </head>
-
-
 
 <body class="bg-dark text-white">
 
-<!-- ================= NAVBAR (igual que tu web) ================= -->
-<nav class="navbar navbar-expand-lg navbar-dark navbar-transparent fixed-top">
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-transparent fixed-top py-2">
   <div class="container">
 
+    <!-- IZQUIERDA: LOGO -->
     <a class="navbar-brand fw-bold" href="../index.html">SuperCars</a>
 
-    <ul class="navbar-nav ms-auto align-items-lg-center">
-      <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-      <li class="nav-item"><a class="nav-link active" href="#">Modelos</a></li>
-      <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
-      <li class="nav-item ms-lg-3">
-        <a class="btn btn-gradient btn-sm rounded-pill px-4" href="contacto-cuestionario.html">
-          Contáctanos
-        </a>
-      </li>
-    </ul>
+    <!-- BOTÓN MOBILE -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <!-- CONTENIDO -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <!-- CENTRO: BUSCADOR -->
+      <form class="nav-search mx-lg-auto my-3 my-lg-0" role="search">
+        <div class="position-relative">
+          <span class="nav-search-icon position-absolute top-50 translate-middle-y ms-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242.656a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
+            </svg>
+          </span>
+
+          <input class="form-control nav-search-input"
+                 type="search"
+                 placeholder="Search Cars"
+                 aria-label="Search">
+        </div>
+      </form>
+
+      <!-- DERECHA: LINKS -->
+      <ul class="navbar-nav ms-lg-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Modelos</a></li>
+        <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+          <a class="btn btn-gradient btn-sm rounded-pill px-4" href="contacto-cuestionario.html">Contáctanos</a>
+        </li>
+      </ul>
+
+    </div>
   </div>
 </nav>
 
-
-
-<!-- ================= HERO CON BUGATTI ================= -->
-<section class="hero-modelos">
-
+<!-- ================= HERO ================= -->
+<section class="hero-modelos d-flex align-items-center">
   <div class="container text-center">
-
     <h1 class="display-4 fw-bold mb-3">
-      Encuentra tu próximo
-      <span class="text-gradient">reto</span>
+      Encuentra tu próximo <span class="text-gradient">reto</span>
     </h1>
-
-    <p class="text-secondary mb-4">
-      Buscar modelo, marca o precio...
-    </p>
-
-
-    <!-- FILTROS -->
-    <div class="filter-box mx-auto col-lg-9">
-
-      <div class="row g-3">
-
-        <div class="col-md-4">
-          <select class="form-select bg-dark text-white border-secondary">
-            <option>Marca</option>
-            <option>Ferrari</option>
-            <option>Lamborghini</option>
-            <option>Bugatti</option>
-            <option>McLaren</option>
-          </select>
-        </div>
-
-        <div class="col-md-4">
-          <select class="form-select bg-dark text-white border-secondary">
-            <option>Precio</option>
-            <option>< 200k €</option>
-            <option>200k – 400k €</option>
-            <option>+ 400k €</option>
-          </select>
-        </div>
-
-        <div class="col-md-4">
-          <select class="form-select bg-dark text-white border-secondary">
-            <option>CV</option>
-            <option>+ 500 CV</option>
-            <option>+ 700 CV</option>
-            <option>+ 900 CV</option>
-          </select>
-        </div>
-
-        <div class="col-12 text-center mt-2">
-          <button class="btn btn-gradient px-5 rounded-pill">Buscar</button>
-        </div>
-
-      </div>
-    </div>
-
   </div>
 </section>
-
-
 
 <!-- ================= LOGOS MARCAS ================= -->
 <section class="py-5">
@@ -175,20 +75,45 @@
     <h3 class="fw-bold mb-4">Marcas con las que trabajamos</h3>
 
     <div class="row g-3 text-center">
+      <div class="col-6 col-md-3 col-lg-2">
+        <div class="brand-card d-flex justify-content-center align-items-center">
+          <img src="../imgs/logos/ferrari.png" alt="Ferrari">
+        </div>
+      </div>
 
-      <div class="col-6 col-md-3 col-lg-2"><div class="brand-card"><img src="../imgs/bugatti_logo.png"></div></div>
-      <div class="col-6 col-md-3 col-lg-2"><div class="brand-card"><img src="../imgs/Lamborghini_logo.png"></div></div>
-      <div class="col-6 col-md-3 col-lg-2"><div class="brand-card"><img src="../imgs/ferrari_logo.png"></div></div>
-      <div class="col-6 col-md-3 col-lg-2"><div class="brand-card"><img src="../imgs/mclaren_logo.png"></div></div>
-      <div class="col-6 col-md-3 col-lg-2"><div class="brand-card"><img src="../imgs/pagani_logo.png"></div></div>
-      <div class="col-6 col-md-3 col-lg-2"><div class="brand-card"><img src="../imgs/koenigsegg_logo.png"></div></div>
+      <div class="col-6 col-md-3 col-lg-2">
+        <div class="brand-card d-flex justify-content-center align-items-center">
+          <img src="../imgs/logos/lamborghini.png" alt="Lamborghini">
+        </div>
+      </div>
 
+      <div class="col-6 col-md-3 col-lg-2">
+        <div class="brand-card d-flex justify-content-center align-items-center">
+          <img src="../imgs/logos/bugatti.png" alt="Bugatti">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3 col-lg-2">
+        <div class="brand-card d-flex justify-content-center align-items-center">
+          <img src="../imgs/logos/mclaren.png" alt="McLaren">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3 col-lg-2">
+        <div class="brand-card d-flex justify-content-center align-items-center">
+          <img src="../imgs/logos/porsche.png" alt="Porsche">
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3 col-lg-2">
+        <div class="brand-card d-flex justify-content-center align-items-center">
+          <img src="../imgs/logos/koenigsegg.png" alt="Koenigsegg">
+        </div>
+      </div>
     </div>
 
   </div>
 </section>
-
-
 
 <!-- ================= MODELOS ================= -->
 <section class="pb-5">
@@ -198,12 +123,11 @@
 
     <div class="row g-4">
 
-      <!-- CARD -->
       <div class="col-md-6 col-lg-4">
-        <div class="car-card">
-          <img src="../imgs/lambo_imagen.png">
+        <div class="car-card h-100">
+          <img src="../imgs/lambo.jpg" alt="Lamborghini Aventador SVJ">
           <div class="p-3">
-            <h5 class="fw-bold">€ 420,000</h5>
+            <h5 class="fw-bold mb-1">€ 420,000</h5>
             <p class="mb-0">Lamborghini Aventador SVJ</p>
             <small class="text-secondary">Madrid, España</small>
           </div>
@@ -211,10 +135,10 @@
       </div>
 
       <div class="col-md-6 col-lg-4">
-        <div class="car-card">
-          <img src="../imgs/ferrari1_imagen.png">
+        <div class="car-card h-100">
+          <img src="../imgs/bmwm8.jpg" alt="Ferrari F8 Tributo">
           <div class="p-3">
-            <h5 class="fw-bold">€ 510,000</h5>
+            <h5 class="fw-bold mb-1">€ 510,000</h5>
             <p class="mb-0">Ferrari F8 Tributo</p>
             <small class="text-secondary">Roma, Italia</small>
           </div>
@@ -222,10 +146,10 @@
       </div>
 
       <div class="col-md-6 col-lg-4">
-        <div class="car-card">
-          <img src="../imgs/mclaren.jpg">
+        <div class="car-card h-100">
+          <img src="../imgs/mclaren.jpg" alt="McLaren 720S">
           <div class="p-3">
-            <h5 class="fw-bold">€ 390,000</h5>
+            <h5 class="fw-bold mb-1">€ 390,000</h5>
             <p class="mb-0">McLaren 720S</p>
             <small class="text-secondary">Londres, UK</small>
           </div>
@@ -233,15 +157,15 @@
       </div>
 
     </div>
-
   </div>
 </section>
+
 <!-- ================= FOOTER ================= -->
 <footer class="footer text-center">
   © 2026 SuperCars · Todos los derechos reservados
 </footer>
 
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </body>
 </html>
