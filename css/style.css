@@ -92,12 +92,10 @@ body {
   height: 220px;
   object-fit: cover;
 }
-
-.news-card {
-  background: #12132b;
-  padding: 25px;
-  border-radius: 10px;
+.bg-panel {
+  background:#12132b;
 }
+
 
 /* ====== OFFCANVAS centrado ====== */
 .offcanvas-center {
@@ -185,12 +183,6 @@ body {
   opacity: 1;
 }
 
-.footer {
-  padding: 20px;
-  background: #080814;
-  color: #aaa;
-}
-
 /* modelos /*
 /* ===== NAV SEARCH ===== */
 .nav-search {
@@ -215,21 +207,20 @@ body {
   color:#fff;
 }
 
-
 /* modelos /*
 /* ================= HERO ================= */
 .hero-modelos{
-  min-height: 90vh;
-  background:
-    linear-gradient(to bottom, rgba(0,0,0,.15), rgba(0,0,0,.7)),
-    url("../imgs/porsche-911-gt2-modelos.jpg") center/cover no-repeat;
-  border-radius: 30px;
+  height: 90vh;
+  background: url("../imgs/porsche-911-gt2-modelos.jpg") center/cover no-repeat;
+  position: relative;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
 }
 
 /* ================= MARCAS ================= */
 .brand-card{
-  background: #ffffff;
-  border-radius: 12px;
   padding: 20px;
   border: 1px solid #e0e0e0;
   min-height: 120px;
@@ -249,25 +240,6 @@ body {
 }
 
 /* ================= MODELOS ================= */
-.car-card-container {
-  perspective: 1000px;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 450px;
-}
-
-.car-card,
-.car-card-back {
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  transition: transform 0.6s;
-  background: #141414;
-  border-radius: 18px;
-  overflow: hidden;
-}
-
 .car-card {
   transform: rotateY(0deg);
   display: flex;
@@ -413,15 +385,6 @@ body {
 
 /* apartado noticias /*
 /* ===== NOTICIAS (mínimo) ===== */
-.news-hero{
-  min-height: 90vh;
-  background:
-    linear-gradient(to bottom, rgba(0,0,0,.15), rgba(0,0,0,.7)),
-    url("../imgs/koenigsegg-modelos.jpg") center/cover no-repeat;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-}
-
 .news-tile{
   background: #12132b;
   border-radius: 16px;
@@ -444,8 +407,6 @@ body {
   height: 210px;
   object-fit: cover;
 }
-
-
 .news-panel{
   background: rgba(18,19,43,.9);
   border-radius: 16px;
@@ -454,20 +415,7 @@ body {
 
 /* ===== NOTICIAS EN TIRAS ===== */
 .news-row {
-  background: #000000e3;
   border-radius: 16px;
-}
-
-.news-row-img {
-  width: 90%;
-  max-width: 260px;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: 12px;
-  object-position: center;
-}
-.news-img-top{
-  object-position: center 35%;
 }
 
 .section-band{
