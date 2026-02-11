@@ -315,7 +315,7 @@ body {
 }
 
 .news-row-img {
-  width: 100%;
+  width: 90%;
   max-width: 260px;
   aspect-ratio: 16 / 9;
   object-fit: cover;
