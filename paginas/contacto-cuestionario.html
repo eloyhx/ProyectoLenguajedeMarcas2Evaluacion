@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Contacto - Cuestionario | SuperDeportivos</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <title>Contacto - Cuestionario | SuperDeportivos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Custom CSS (mismos colores y estilo) -->
-  <link rel="stylesheet" href="../css/style.css">
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet" />
 </head>
+
 <body>
+    <!-- VIDEO BACKGROUND WRAPPER -->
+    <section class="video-bg">
+        <video autoplay muted loop playsinline>
+            <source src="../bmwMejor.mp4" type="video/mp4" />
+        </video>
 
-<!-- NAVBAR (mismo estilo) -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="../index.html"> SuperCars</a>
+        <div class="video-overlay"></div>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <!-- NAV -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.optimizado.html">SuperCars</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
     <div class="collapse navbar-collapse" id="menu">
       <ul class="navbar-nav ms-auto">
@@ -32,6 +40,27 @@
     </div>
   </div>
 </nav>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="../paginas/modelos.html">Modelos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="../paginas/noticias.html">Noticias</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-gradient btn-sm rounded-pill px-4"
+                                href="../paginas/contacto-cuestionario.html">
+                                Contáctanos
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
 <!-- CONTENIDO PRINCIPAL -->
 <main class="container mt-5 pt-5">
@@ -49,66 +78,165 @@
               <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Juan" required>
               <div class="invalid-feedback">Por favor, indica tu nombre.</div>
             </div>
+        </nav>
 
-            <div class="mb-3">
-              <label for="apellidos" class="form-label">Apellidos</label>
-              <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Pérez" required>
-              <div class="invalid-feedback">Por favor, indica tus apellidos.</div>
-            </div>
+        <!-- CONTENIDO PRINCIPAL (encima del video) -->
+        <main class="container position-relative z-1 mt-5 pt-5 py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="text-center mb-3 text-white">Contáctanos</h1>
+                    <p class="text-center text-white mb-4">
+                        Has llegado al formulario rápido con el cuestionario prellenado.
+                        Completa tus datos y envía cuando quieras.
+                    </p>
 
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="telefono" class="form-label">Teléfono</label>
-                <input type="tel" class="form-control" id="telefono" name="telefono" pattern="[0-9+() -]{6,}" placeholder="+34 600 000 000" required>
-                <div class="invalid-feedback">Introduce un teléfono válido.</div>
-              </div>
+                    <div class="card bg-glass text-white p-4">
+                        <div class="card-body">
+                            <form id="contactForm" action="#" method="get">
+                                <div class="mb-3">
+                                    <label class="form-label" for="nombre">Nombre</label>
+                                    <input class="form-control" id="nombre" name="nombre" type="text" placeholder="Juan"
+                                        required />
+                                    <div class="invalid-feedback">Por favor, indica tu nombre.</div>
+                                </div>
 
-              <div class="col-md-6 mb-3">
-                <label for="email" class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="tu.nombre@gmail.com" required>
-                <div class="invalid-feedback">Introduce un correo válido.</div>
-              </div>
-            </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="apellidos">Apellidos</label>
+                                    <input class="form-control" id="apellidos" name="apellidos" type="text"
+                                        placeholder="Pérez" required />
+                                    <div class="invalid-feedback">Por favor, indica tus apellidos.</div>
+                                </div>
 
-            <div class="mb-3">
-              <label for="asunto" class="form-label">Asunto</label>
-              <input type="text" class="form-control" id="asunto" name="asunto" placeholder="Ej: Información sobre Ferrari F8 Tributo">
-            </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label" for="telefono">Teléfono</label>
+                                        <input class="form-control" id="telefono" name="telefono" type="tel"
+                                            placeholder="+34 600 000 000" pattern="[0-9+() -]{6,}" required />
+                                        <div class="invalid-feedback">Introduce un teléfono válido.</div>
+                                    </div>
 
-            <div class="mb-3">
-              <label for="mensaje" class="form-label">Cuestionario / Mensaje</label>
-              <textarea class="form-control" id="mensaje" name="mensaje" rows="8" required
-                placeholder="Quisiera recibir información sobre:
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label" for="email">Correo electrónico</label>
+                                        <input class="form-control" id="email" name="email" type="email"
+                                            placeholder="tu.nombre@gmail.com" required />
+                                        <div class="invalid-feedback">Introduce un correo válido.</div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label" for="asunto">Asunto</label>
+                                    <input class="form-control" id="asunto" name="asunto" type="text"
+                                        placeholder="Ej: Información sobre Ferrari F8 Tributo" />
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label" for="mensaje">Cuestionario / Mensaje</label>
+                                    <textarea class="form-control" id="mensaje" name="mensaje" rows="8" required
+                                        placeholder="Quisiera recibir información sobre:
 - Modelo(es) de interés (indica nombre/s):
 - Presupuesto aproximado:
 - Opciones de financiamiento solicitadas:
 - Disponibilidad para prueba de conducción (fechas/ciudad):
 - Comentarios adicionales / preguntas:"></textarea>
-              <div class="invalid-feedback">Cuéntanos brevemente qué necesitas.</div>
+                                    <div class="invalid-feedback">Cuéntanos brevemente qué necesitas.</div>
+                                </div>
+
+                                <div class="mb-3 form-check">
+                                    <input class="form-check-input" id="consent" type="checkbox" required />
+                                    <label class="form-check-label" for="consent">
+                                        Acepto que me contacten vía teléfono o correo para facilitar información
+                                    </label>
+                                    <div class="invalid-feedback">Debes aceptar para que podamos contactarte.</div>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button class="btn btn-gradient btn-lg" type="submit">
+                                        Enviar y ser contactado
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                  
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER TRANSPARENTE (video visible detrás) -->
+<footer class="container-fluid text-white border-top border-light border-opacity-25 py-4 position-relative z-1">
+    <div class="container">
+        <div class="row gy-4 align-items-start">
+
+            <!-- MARCA -->
+            <div class="col-lg-5">
+                <h6 class="fw-bold text-gradient mb-2">SuperCars</h6>
+                <p class="text-light mb-0">
+                    Superdeportivos exclusivos, noticias y experiencias
+                    para auténticos amantes del motor.
+                </p>
             </div>
 
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="consent" required>
-              <label class="form-check-label" for="consent">Acepto que me contacten vía teléfono o correo para facilitar información</label>
-              <div class="invalid-feedback">Debes aceptar para que podamos contactarte.</div>
+            <!-- NAVEGACIÓN -->
+            <div class="col-6 col-lg-3">
+                <h6 class="fw-bold text-gradient mb-2">Navegación</h6>
+                <ul class="list-unstyled small mb-0">
+                    <li class="mb-1">
+                        <a href="../index.html"
+                            class="text-light text-decoration-none link-light">Inicio</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="../paginas/modelos.html"
+                            class="text-light text-decoration-none link-light">Modelos</a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="../paginas/noticias.html"
+                            class="text-light text-decoration-none link-light">Noticias</a>
+                    </li>
+                    <li>
+                        <a href="../paginas/contacto-cuestionario.html"
+                            class="text-light text-decoration-none link-light">Contacto</a>
+                    </li>
+                </ul>
             </div>
 
-            <div class="d-grid">
-              <button type="submit" class="btn btn-gradient btn-lg">Enviar y ser contactado</button>
+            <!-- LEGAL -->
+            <div class="col-6 col-lg-2">
+                <h6 class="fw-bold text-gradient mb-2">Legal</h6>
+                <ul class="list-unstyled small mb-0">
+                    <li class="mb-1">
+                        <a href="#" class="text-light text-decoration-none link-light">Aviso legal</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-light text-decoration-none link-light">Privacidad</a>
+                    </li>
+                </ul>
             </div>
-          </form>
+
+            <!-- REDES -->
+            <div class="col-lg-2 text-lg-end text-center">
+                <h6 class="fw-bold text-gradient mb-2">Síguenos</h6>
+                <div class="d-flex justify-content-center justify-content-lg-end gap-2 mt-3">
+                    <a href="#" class="btn btn-outline-light btn-sm rounded-circle p-1 lh-1">IG</a>
+                    <a href="#" class="btn btn-outline-light btn-sm rounded-circle p-1 lh-1">YT</a>
+                    <a href="#" class="btn btn-outline-light btn-sm rounded-circle p-1 lh-1">TT</a>
+                </div>
+            </div>
 
         </div>
-      </div>
-    </div>
-  </div>
-</main>
 
-<!-- FOOTER (mismo estilo) -->
-<footer class="footer text-center mt-5">
-  <p>© 2026 SuperCars · Todos los derechos reservados</p>
+        <hr class="border-light border-opacity-25 my-3">
+
+        <div class="text-center text-white-50 small">
+            © 2026 SuperCars · Todos los derechos reservados
+        </div>
+    </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
