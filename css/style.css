@@ -209,15 +209,6 @@ body {
 
 /* modelos /*
 /* ================= HERO ================= */
-.hero-modelos{
-  height: 90vh;
-  background: url("../imgs/porsche-911-gt2-modelos.jpg") center/cover no-repeat;
-  position: relative;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  overflow: hidden;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-}
 
 /* ================= MARCAS ================= */
 .brand-card{
