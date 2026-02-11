@@ -1,345 +1,672 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>SuperCars · Modelos</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SuperCars · Modelos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- TU CSS -->
-  <link rel="stylesheet" href="../css/style.css">
-</head>
+    <!-- TU CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
 
-<body class="bg-dark text-white">
+  <body class="text-white">
+    <!-- ================= NAVBAR ================= -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark navbar-transparent fixed-top py-2"
+    >
+      <div class="container">
+        <!-- IZQUIERDA: LOGO -->
+        <a class="navbar-brand fw-bold" href="../index.html">SuperCars</a>
 
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar navbar-expand-lg navbar-dark navbar-transparent fixed-top py-2">
-  <div class="container">
+        <!-- BOTÓN MOBILE -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <!-- IZQUIERDA: LOGO -->
-    <a class="navbar-brand fw-bold" href="../index.html">SuperCars</a>
+        <!-- CONTENIDO -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- CENTRO: BUSCADOR -->
+          <form class="nav-search mx-lg-auto my-3 my-lg-0" role="search">
+            <div class="position-relative">
+              <span
+                class="nav-search-icon position-absolute top-50 translate-middle-y ms-3"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242.656a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"
+                  />
+                </svg>
+              </span>
 
-    <!-- BOTÓN MOBILE -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+              <input
+                class="form-control nav-search-input"
+                type="search"
+                placeholder="Buscar coches"
+                aria-label="Search"
+              />
+            </div>
+          </form>
 
-    <!-- CONTENIDO -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-
-      <!-- CENTRO: BUSCADOR -->
-      <form class="nav-search mx-lg-auto my-3 my-lg-0" role="search">
-        <div class="position-relative">
-          <span class="nav-search-icon position-absolute top-50 translate-middle-y ms-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242.656a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
-            </svg>
-          </span>
-
-          <input class="form-control nav-search-input"
-                 type="search"
-                 placeholder="Buscar coches"
-                 aria-label="Search">
-        </div>
-      </form>
-
-      <!-- DERECHA: LINKS -->
-      <ul class="navbar-nav ms-lg-auto align-items-lg-center">
-        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link active" href="#">Modelos</a></li>
-        <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
-        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-          <a class="btn btn-gradient btn-sm rounded-pill px-4" href="contacto-cuestionario.html">Contáctanos</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- ================= HERO ================= -->
-<section class="hero-modelos d-flex align-items-center">
-  <div class="container text-center">
-    <h1 class="display-4 fw-bold mb-3">
-      Encuentra tu próximo <span class="text-gradient">reto</span>
-    </h1>
-  </div>
-</section>
-
-<!-- ================= LOGOS MARCAS ================= -->
-<section class="py-5">
-  <div class="container">
-
-    <h3 class="fw-bold mb-4">Marcas con las que trabajamos</h3>
-
-    <div class="row g-3 text-center">
-      <div class="col-6 col-md-3 col-lg-2">
-        <div class="brand-card d-flex justify-content-center align-items-center">
-          <img src="../imgs/ferrari_logo.png" alt="Ferrari">
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3 col-lg-2">
-        <div class="brand-card d-flex justify-content-center align-items-center">
-          <img src="../imgs/Lamborghini_logo.png" alt="Lamborghini">
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3 col-lg-2">
-        <div class="brand-card d-flex justify-content-center align-items-center">
-          <img src="../imgs/bugatty_logo.webp" alt="Bugatti">
+          <!-- DERECHA: LINKS -->
+          <ul class="navbar-nav ms-lg-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Modelos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="noticias.html">Noticias</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <a
+                class="btn btn-gradient btn-sm rounded-pill px-4"
+                href="contacto-cuestionario.html"
+                >Contáctanos</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
 
-      <div class="col-6 col-md-3 col-lg-2">
-        <div class="brand-card d-flex justify-content-center align-items-center">
-          <img src="../imgs/mclaren_logo.png" alt="McLaren">
+    <!-- ================= HERO ================= -->
+    <section class="hero-modelos d-flex align-items-center">
+      <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-3">
+          Encuentra tu próximo <span class="text-gradient">reto</span>
+        </h1>
+      </div>
+    </section>
+
+    <!-- ================= LOGOS MARCAS ================= -->
+    <section class="py-5">
+      <div class="container">
+        <h3 class="fw-bold mb-4">Marcas con las que trabajamos</h3>
+
+        <div class="row g-3 text-center">
+          <div class="col-6 col-md-3 col-lg-2">
+            <div
+              class="brand-card d-flex justify-content-center align-items-center"
+              style="background: #ffffff; border-radius: 12px"
+            >
+              <img src="../imgs/ferrari_logo.png" alt="Ferrari" />
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <div
+              class="brand-card d-flex justify-content-center align-items-center"
+              style="background: #ffffff; border-radius: 12px"
+            >
+              <img src="../imgs/Lamborghini_logo.png" alt="Lamborghini" />
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <div
+              class="brand-card d-flex justify-content-center align-items-center"
+              style="background: #ffffff; border-radius: 12px"
+            >
+              <img src="../imgs/bugatty_logo.webp" alt="Bugatti" />
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <div
+              class="brand-card d-flex justify-content-center align-items-center"
+              style="background: #ffffff; border-radius: 12px"
+            >
+              <img src="../imgs/mclaren_logo.png" alt="McLaren" />
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <div
+              class="brand-card d-flex justify-content-center align-items-center"
+              style="background: #ffffff; border-radius: 12px"
+            >
+              <img src="../imgs/Koenigsegg_logo.png" alt="Koenigsegg" />
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <div
+              class="brand-card d-flex justify-content-center align-items-center"
+              style="background: #ffffff; border-radius: 12px"
+            >
+              <img src="../imgs/pagani1_logo.png" alt="Pagani" />
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="col-6 col-md-3 col-lg-2">
-        <div class="brand-card d-flex justify-content-center align-items-center">
-          <img src="../imgs/Koenigsegg_logo.png" alt="Koenigsegg">
-        </div>
-      </div>
+    <!-- ================= MODELOS ================= -->
+    <section class="pb-5">
+      <div class="container">
+        <h3 class="fw-bold mb-4">Modelos disponibles</h3>
 
-      <div class="col-6 col-md-3 col-lg-2">
-        <div class="brand-card d-flex justify-content-center align-items-center">
-          <img src="../imgs/pagani1_logo.png" alt="Pagani">
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= MODELOS ================= -->
-<section class="pb-5">
-  <div class="container">
-
-    <h3 class="fw-bold mb-4">Modelos disponibles</h3>
-
-    <div class="row g-4">
-
-      <div class="col-md-6 col-lg-4" id="lamborghini-aventador">
-        <div class="car-card-container h-100">
-          <div class="car-card h-100">
-            <div class="car-card-image-wrapper">
-              <img src="../imgs/lambo_imagen.png" alt="Lamborghini Aventador SVJ">
-              <div class="car-card-overlay">
-                <span class="ver-mas-btn">Ver más</span>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4" id="lamborghini-aventador">
+            <div class="car-card-container h-100" style="perspective: 1000px; position: relative; width: 100%; height: 100%; min-height: 450px;">
+              <div
+                class="car-card h-100"
+                style="
+                  background: #141414;
+                  border-radius: 18px;
+                  width: 100%;
+                  height: 100%;
+                  backface-visibility: hidden;
+                  transition: transform 0.6s;
+                  overflow: hidden;
+                "
+              >
+                <div class="car-card-image-wrapper">
+                  <img
+                    src="../imgs/lambo_imagen.png"
+                    alt="Lamborghini Aventador SVJ"
+                  />
+                  <div class="car-card-overlay">
+                    <span class="ver-mas-btn">Ver más</span>
+                  </div>
+                </div>
+                <div class="p-3">
+                  <h5 class="fw-bold mb-1">€ 420,000</h5>
+                  <p class="mb-0">Lamborghini Aventador SVJ</p>
+                  <small class="text-secondary">Madrid, España</small>
+                </div>
+              </div>
+              <div
+                class="car-card-back h-100 p-3"
+                style="
+                  background: #141414;
+                  border-radius: 18px;
+                  width: 100%;
+                  height: 100%;
+                  backface-visibility: hidden;
+                  transition: transform 0.6s;
+                  overflow: hidden;
+                "
+              >
+                <button class="btn-close-flip" aria-label="Cerrar">×</button>
+                <h5 class="fw-bold mb-2">Especificaciones</h5>
+                <ul class="specs-list">
+                  <li><strong>Motor:</strong> V12 6.5L</li>
+                  <li><strong>Potencia:</strong> 740 CV</li>
+                  <li><strong>0-100 km/h:</strong> 2.9s</li>
+                  <li><strong>Velocidad máx:</strong> 350 km/h</li>
+                  <li><strong>Cilindros:</strong> 12</li>
+                  <li><strong>Transmisión:</strong> Automática 7V</li>
+                </ul>
+                <h5 class="fw-bold mb-2 mt-3">Descripción</h5>
+                <p class="car-description">
+                  El Lamborghini Aventador SVJ representa el pico de la
+                  ingeniería italiana. Con su diseño aerodinámico extremo, motor
+                  V12 naturalmente aspirado y tecnología de última generación,
+                  ofrece una experiencia de conducción sin igual. Su carrocería
+                  de carbono y su elegante interior deportivo lo convierten en
+                  una obra de arte sobre ruedas, combinando lujo y rendimiento
+                  extremo.
+                </p>
               </div>
             </div>
-            <div class="p-3">
-              <h5 class="fw-bold mb-1">€ 420,000</h5>
-              <p class="mb-0">Lamborghini Aventador SVJ</p>
-              <small class="text-secondary">Madrid, España</small>
-            </div>
           </div>
-          <div class="car-card-back h-100 p-3">
-            <button class="btn-close-flip" aria-label="Cerrar">×</button>
-            <h5 class="fw-bold mb-2">Especificaciones</h5>
-            <ul class="specs-list">
-              <li><strong>Motor:</strong> V12 6.5L</li>
-              <li><strong>Potencia:</strong> 740 CV</li>
-              <li><strong>0-100 km/h:</strong> 2.9s</li>
-              <li><strong>Velocidad máx:</strong> 350 km/h</li>
-              <li><strong>Cilindros:</strong> 12</li>
-              <li><strong>Transmisión:</strong> Automática 7V</li>
-            </ul>
-            <h5 class="fw-bold mb-2 mt-3">Descripción</h5>
-            <p class="car-description">El Lamborghini Aventador SVJ representa el pico de la ingeniería italiana. Con su diseño aerodinámico extremo, motor V12 naturalmente aspirado y tecnología de última generación, ofrece una experiencia de conducción sin igual. Su carrocería de carbono y su elegante interior deportivo lo convierten en una obra de arte sobre ruedas, combinando lujo y rendimiento extremo.</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-md-6 col-lg-4" id="bugatti-chiron">
-        <div class="car-card-container h-100">
-          <div class="car-card h-100">
-            <div class="car-card-image-wrapper">
-              <img src="../imgs/bugatty1_imagen.png" alt="Bugatti Chiron">
-              <div class="car-card-overlay">
-                <span class="ver-mas-btn">Ver más</span>
+          <div class="col-md-6 col-lg-4" id="bugatti-chiron">
+            <div class="car-card-container h-100" style= "perspective: 1000px; position: relative; width: 100%; height: 100%; min-height: 450px;">
+              <div
+                class="car-card h-100"
+                style="
+                  background: #141414;
+                  border-radius: 18px;
+                  width: 100%;
+                  height: 100%;
+                  backface-visibility: hidden;
+                  transition: transform 0.6s;
+                  overflow: hidden;
+                "
+              >
+                <div class="car-card-image-wrapper">
+                  <img src="../imgs/bugatty1_imagen.png" alt="Bugatti Chiron" />
+                  <div class="car-card-overlay">
+                    <span class="ver-mas-btn">Ver más</span>
+                  </div>
+                </div>
+                <div class="p-3">
+                  <h5 class="fw-bold mb-1">€ 2,600,000</h5>
+                  <p class="mb-0">Bugatti Chiron</p>
+                  <small class="text-secondary">París, Francia</small>
+                </div>
+              </div>
+              <div
+                class="car-card-back h-100 p-3"
+                style="
+                  background: #141414;
+                  border-radius: 18px;
+                  width: 100%;
+                  height: 100%;
+                  backface-visibility: hidden;
+                  transition: transform 0.6s;
+                  overflow: hidden;
+                "
+              >
+                <button class="btn-close-flip" aria-label="Cerrar">×</button>
+                <h5 class="fw-bold mb-2">Especificaciones</h5>
+                <ul class="specs-list">
+                  <li><strong>Motor:</strong> W16 8.0L</li>
+                  <li><strong>Potencia:</strong> 1,500 CV</li>
+                  <li><strong>0-100 km/h:</strong> 2.4s</li>
+                  <li><strong>Velocidad máx:</strong> 490 km/h</li>
+                  <li><strong>Cilindros:</strong> 16</li>
+                  <li><strong>Transmisión:</strong> Automática 7V</li>
+                </ul>
+                <h5 class="fw-bold mb-2 mt-3">Descripción</h5>
+                <p class="car-description">
+                  El Bugatti Chiron es el símbolo absoluto del lujo y la
+                  velocidad extrema. Su legendario motor W16 es una joya de
+                  ingeniería francesa que propulsa este hiperdeportivo a
+                  velocidades sin precedentes. Con acabados de cuero y
+                  materiales premium en cada rincón, el Chiron ofrece una
+                  combinación inigualable de potencia bruta, confort absoluto y
+                  exclusividad sin par en el mundo automotriz.
+                </p>
               </div>
             </div>
-            <div class="p-3">
-              <h5 class="fw-bold mb-1">€ 2,600,000</h5>
-              <p class="mb-0">Bugatti Chiron</p>
-              <small class="text-secondary">París, Francia</small>
-            </div>
           </div>
-          <div class="car-card-back h-100 p-3">
-            <button class="btn-close-flip" aria-label="Cerrar">×</button>
-            <h5 class="fw-bold mb-2">Especificaciones</h5>
-            <ul class="specs-list">
-              <li><strong>Motor:</strong> W16 8.0L</li>
-              <li><strong>Potencia:</strong> 1,500 CV</li>
-              <li><strong>0-100 km/h:</strong> 2.4s</li>
-              <li><strong>Velocidad máx:</strong> 490 km/h</li>
-              <li><strong>Cilindros:</strong> 16</li>
-              <li><strong>Transmisión:</strong> Automática 7V</li>
-            </ul>
-            <h5 class="fw-bold mb-2 mt-3">Descripción</h5>
-            <p class="car-description">El Bugatti Chiron es el símbolo absoluto del lujo y la velocidad extrema. Su legendario motor W16 es una joya de ingeniería francesa que propulsa este hiperdeportivo a velocidades sin precedentes. Con acabados de cuero y materiales premium en cada rincón, el Chiron ofrece una combinación inigualable de potencia bruta, confort absoluto y exclusividad sin par en el mundo automotriz.</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-md-6 col-lg-4" id="ferrari-f8">
-        <div class="car-card-container h-100">
-          <div class="car-card h-100">
-            <div class="car-card-image-wrapper">
-              <img src="../imgs/ferrari1_imagen.png" alt="Ferrari F8 Tributo">
-              <div class="car-card-overlay">
-                <span class="ver-mas-btn">Ver más</span>
+          <div class="col-md-6 col-lg-4" id="ferrari-f8">
+            <div class="car-card-container h-100" style="perspective: 1000px; position: relative; width: 100%; height: 100%; min-height: 450px;">
+              <div
+                class="car-card h-100"
+                style="
+                  background: #141414;
+                  border-radius: 18px;
+                  width: 100%;
+                  height: 100%;
+                  backface-visibility: hidden;
+                  transition: transform 0.6s;
+                  overflow: hidden;
+                "
+              >
+                <div class="car-card-image-wrapper">
+                  <img
+                    src="../imgs/ferrari1_imagen.png"
+                    alt="Ferrari F8 Tributo"
+                  />
+                  <div class="car-card-overlay">
+                    <span class="ver-mas-btn">Ver más</span>
+                  </div>
+                </div>
+                <div class="p-3">
+                  <h5 class="fw-bold mb-1">€ 510,000</h5>
+                  <p class="mb-0">Ferrari F8 Tributo</p>
+                  <small class="text-secondary">Roma, Italia</small>
+                </div>
+              </div>
+              <div
+                class="car-card-back h-100 p-3"
+                style="
+                  background: #141414;
+                  border-radius: 18px;
+                  width: 100%;
+                  height: 100%;
+                  backface-visibility: hidden;
+                  transition: transform 0.6s;
+                  overflow: hidden;
+                "
+              >
+                <button class="btn-close-flip" aria-label="Cerrar">×</button>
+                <h5 class="fw-bold mb-2">Especificaciones</h5>
+                <ul class="specs-list">
+                  <li><strong>Motor:</strong> V12 3.9L Biturbo</li>
+                  <li><strong>Potencia:</strong> 720 CV</li>
+                  <li><strong>0-100 km/h:</strong> 2.9s</li>
+                  <li><strong>Velocidad máx:</strong> 340 km/h</li>
+                  <li><strong>Cilindros:</strong> 12</li>
+                  <li><strong>Transmisión:</strong> Automática 8V</li>
+                </ul>
+                <h5 class="fw-bold mb-2 mt-3">Descripción</h5>
+                <p class="car-description">
+                  El Ferrari F8 Tributo es la culminación de décadas de herencia
+                  Ferrari. Su icónico diseño rojo italiano combina líneas
+                  clásicas con una aerodinámica futurista. El motor V12 biturbo
+                  garantiza aceleración aterradora mientras mantiene la
+                  elegancia distintiva de la marca de Maranello. Cada detalle,
+                  desde la costura del cuero hasta el sistema de suspensión
+                  adaptativa, refleja la pasión por la excelencia.
+                </p>
               </div>
             </div>
-            <div class="p-3">
-              <h5 class="fw-bold mb-1">€ 510,000</h5>
-              <p class="mb-0">Ferrari F8 Tributo</p>
-              <small class="text-secondary">Roma, Italia</small>
-            </div>
           </div>
-          <div class="car-card-back h-100 p-3">
-            <button class="btn-close-flip" aria-label="Cerrar">×</button>
-            <h5 class="fw-bold mb-2">Especificaciones</h5>
-            <ul class="specs-list">
-              <li><strong>Motor:</strong> V12 3.9L Biturbo</li>
-              <li><strong>Potencia:</strong> 720 CV</li>
-              <li><strong>0-100 km/h:</strong> 2.9s</li>
-              <li><strong>Velocidad máx:</strong> 340 km/h</li>
-              <li><strong>Cilindros:</strong> 12</li>
-              <li><strong>Transmisión:</strong> Automática 8V</li>
-            </ul>
-            <h5 class="fw-bold mb-2 mt-3">Descripción</h5>
-            <p class="car-description">El Ferrari F8 Tributo es la culminación de décadas de herencia Ferrari. Su icónico diseño rojo italiano combina líneas clásicas con una aerodinámica futurista. El motor V12 biturbo garantiza aceleración aterradora mientras mantiene la elegancia distintiva de la marca de Maranello. Cada detalle, desde la costura del cuero hasta el sistema de suspensión adaptativa, refleja la pasión por la excelencia.</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-md-6 col-lg-4" id="mclaren-720s">
-        <div class="car-card-container h-100">
-          <div class="car-card h-100">
-            <div class="car-card-image-wrapper">
-              <img src="../imgs/mclaren1_imagen.png" alt="McLaren 720S">
-              <div class="car-card-overlay">
-                <span class="ver-mas-btn">Ver más</span>
+          <div class="col-md-6 col-lg-4" id="mclaren-720s">
+            <div class="car-card-container h-100" style="perspective: 1000px; position: relative; width: 100%; height: 100%; min-height: 450px;">
+              <div
+                class="car-card h-100"
+                style="
+                  background: #141414;
+                  border-radius: 18px;
+                  width: 100%;
+                  height: 100%;
+                  backface-visibility: hidden;
+                  transition: transform 0.6s;
+                  overflow: hidden;
+                "
+              >
+                <div class="car-card-image-wrapper">
+                  <img src="../imgs/mclaren1_imagen.png" alt="McLaren 720S" />
+                  <div class="car-card-overlay">
+                    <span class="ver-mas-btn">Ver más</span>
+                  </div>
+                </div>
+                <div class="p-3">
+                  <h5 class="fw-bold mb-1">€ 390,000</h5>
+                  <p class="mb-0">McLaren 720S</p>
+                  <small class="text-secondary">Londres, UK</small>
+                </div>
+              </div>
+              <div
+                class="car-card-back h-100 p-3"
+                style="
+                  background: #141414;
+                  border-radius: 18px;
+                  width: 100%;
+                  height: 100%;
+                  backface-visibility: hidden;
+                  transition: transform 0.6s;
+                  overflow: hidden;
+                "
+              >
+                <button class="btn-close-flip" aria-label="Cerrar">×</button>
+                <h5 class="fw-bold mb-2">Especificaciones</h5>
+                <ul class="specs-list">
+                  <li><strong>Motor:</strong> V8 4.0L Biturbo</li>
+                  <li><strong>Potencia:</strong> 710 CV</li>
+                  <li><strong>0-100 km/h:</strong> 2.8s</li>
+                  <li><strong>Velocidad máx:</strong> 341 km/h</li>
+                  <li><strong>Cilindros:</strong> 8</li>
+                  <li><strong>Transmisión:</strong> Automática 7V</li>
+                </ul>
+                <h5 class="fw-bold mb-2 mt-3">Descripción</h5>
+                <p class="car-description">
+                  El McLaren 720S es la culminación de la experiencia de Fórmula
+                  1 en un deportivo de calle. Su estructura de carbono
+                  ultraligera y su tecnología de punta heredada de la F1 crean
+                  un equilibrio perfecto entre potencia y agilidad. El diseño
+                  aerodinámico británico combina funcionalidad extrema con una
+                  estética moderna y agresiva, ofreciendo una experiencia de
+                  conducción pura y sin compromisos.
+                </p>
               </div>
             </div>
-            <div class="p-3">
-              <h5 class="fw-bold mb-1">€ 390,000</h5>
-              <p class="mb-0">McLaren 720S</p>
-              <small class="text-secondary">Londres, UK</small>
-            </div>
           </div>
-          <div class="car-card-back h-100 p-3">
-            <button class="btn-close-flip" aria-label="Cerrar">×</button>
-            <h5 class="fw-bold mb-2">Especificaciones</h5>
-            <ul class="specs-list">
-              <li><strong>Motor:</strong> V8 4.0L Biturbo</li>
-              <li><strong>Potencia:</strong> 710 CV</li>
-              <li><strong>0-100 km/h:</strong> 2.8s</li>
-              <li><strong>Velocidad máx:</strong> 341 km/h</li>
-              <li><strong>Cilindros:</strong> 8</li>
-              <li><strong>Transmisión:</strong> Automática 7V</li>
-            </ul>
-            <h5 class="fw-bold mb-2 mt-3">Descripción</h5>
-            <p class="car-description">El McLaren 720S es la culminación de la experiencia de Fórmula 1 en un deportivo de calle. Su estructura de carbono ultraligera y su tecnología de punta heredada de la F1 crean un equilibrio perfecto entre potencia y agilidad. El diseño aerodinámico británico combina funcionalidad extrema con una estética moderna y agresiva, ofreciendo una experiencia de conducción pura y sin compromisos.</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-md-6 col-lg-4" id="pagani-huayra">
-        <div class="car-card-container h-100">
-          <div class="car-card h-100">
-            <div class="car-card-image-wrapper">
-              <img src="../imgs/pagani1_imagen.png" alt="Pagani Huayra">
-              <div class="car-card-overlay">
-                <span class="ver-mas-btn">Ver más</span>
+          <div class="col-md-6 col-lg-4" id="pagani-huayra">
+            <div class="car-card-container h-100" style="perspective: 1000px; position: relative; width: 100%; height: 100%; min-height: 450px;">
+              <div
+                class="car-card h-100"
+                style="
+                  background: #141414;
+                  border-radius: 18px;
+                  width: 100%;
+                  height: 100%;
+                  backface-visibility: hidden;
+                  transition: transform 0.6s;
+                  overflow: hidden;
+                "
+              >
+                <div class="car-card-image-wrapper">
+                  <img src="../imgs/pagani1_imagen.png" alt="Pagani Huayra" />
+                  <div class="car-card-overlay">
+                    <span class="ver-mas-btn">Ver más</span>
+                  </div>
+                </div>
+                <div class="p-3">
+                  <h5 class="fw-bold mb-1">€ 1,400,000</h5>
+                  <p class="mb-0">Pagani Huayra</p>
+                  <small class="text-secondary">Módena, Italia</small>
+                </div>
+              </div>
+              <div
+                class="car-card-back h-100 p-3"
+                style="
+                  background: #141414;
+                  border-radius: 18px;
+                  width: 100%;
+                  height: 100%;
+                  backface-visibility: hidden;
+                  transition: transform 0.6s;
+                  overflow: hidden;
+                "
+              >
+                <button class="btn-close-flip" aria-label="Cerrar">×</button>
+                <h5 class="fw-bold mb-2">Especificaciones</h5>
+                <ul class="specs-list">
+                  <li><strong>Motor:</strong> V12 6.0L Biturbo</li>
+                  <li><strong>Potencia:</strong> 730 CV</li>
+                  <li><strong>0-100 km/h:</strong> 2.8s</li>
+                  <li><strong>Velocidad máx:</strong> 370 km/h</li>
+                  <li><strong>Cilindros:</strong> 12</li>
+                  <li><strong>Transmisión:</strong> Automática 7V</li>
+                </ul>
+                <h5 class="fw-bold mb-2 mt-3">Descripción</h5>
+                <p class="car-description">
+                  El Pagani Huayra es una obra maestra artesanal de ingeniería
+                  italiana. Cada unidad es elaborada manualmente con materiales
+                  exóticos como la fibra de carbono y el titanio. Su diseño
+                  futurista con líneas fluidas y puertas de gaviota crea un
+                  espectáculo visual único. Con solo unas pocas unidades
+                  producidas, el Huayra representa la exclusividad suprema y la
+                  dedicación al perfeccionismo en su forma más pura.
+                </p>
               </div>
             </div>
-            <div class="p-3">
-              <h5 class="fw-bold mb-1">€ 1,400,000</h5>
-              <p class="mb-0">Pagani Huayra</p>
-              <small class="text-secondary">Módena, Italia</small>
-            </div>
           </div>
-          <div class="car-card-back h-100 p-3">
-            <button class="btn-close-flip" aria-label="Cerrar">×</button>
-            <h5 class="fw-bold mb-2">Especificaciones</h5>
-            <ul class="specs-list">
-              <li><strong>Motor:</strong> V12 6.0L Biturbo</li>
-              <li><strong>Potencia:</strong> 730 CV</li>
-              <li><strong>0-100 km/h:</strong> 2.8s</li>
-              <li><strong>Velocidad máx:</strong> 370 km/h</li>
-              <li><strong>Cilindros:</strong> 12</li>
-              <li><strong>Transmisión:</strong> Automática 7V</li>
-            </ul>
-            <h5 class="fw-bold mb-2 mt-3">Descripción</h5>
-            <p class="car-description">El Pagani Huayra es una obra maestra artesanal de ingeniería italiana. Cada unidad es elaborada manualmente con materiales exóticos como la fibra de carbono y el titanio. Su diseño futurista con líneas fluidas y puertas de gaviota crea un espectáculo visual único. Con solo unas pocas unidades producidas, el Huayra representa la exclusividad suprema y la dedicación al perfeccionismo en su forma más pura.</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-md-6 col-lg-4" id="koenigsegg-jesko">
-        <div class="car-card-container h-100">
-          <div class="car-card h-100">
-            <div class="car-card-image-wrapper">
-              <img src="../imgs/Koenigsegg2_imagen.png" alt="Koenigsegg Jesko">
-              <div class="car-card-overlay">
-                <span class="ver-mas-btn">Ver más</span>
+          <div class="col-md-6 col-lg-4" id="koenigsegg-jesko">
+            <div class="car-card-container h-100" style="perspective: 1000px; position: relative; width: 100%; height: 100%; min-height: 450px;">
+              <div
+                class="car-card h-100"
+                style="
+                  background: #141414;
+                  border-radius: 18px;
+                  width: 100%;
+                  height: 100%;
+                  backface-visibility: hidden;
+                  transition: transform 0.6s;
+                  overflow: hidden;
+                "
+              >
+                <div class="car-card-image-wrapper">
+                  <img
+                    src="../imgs/Koenigsegg2_imagen.png"
+                    alt="Koenigsegg Jesko"
+                  />
+                  <div class="car-card-overlay">
+                    <span class="ver-mas-btn">Ver más</span>
+                  </div>
+                </div>
+                <div class="p-3">
+                  <h5 class="fw-bold mb-1">€ 3,000,000</h5>
+                  <p class="mb-0">Koenigsegg Jesko</p>
+                  <small class="text-secondary">Estocolmo, Suecia</small>
+                </div>
+              </div>
+              <div
+                class="car-card-back h-100 p-3"
+                style="
+                  background: #141414;
+                  border-radius: 18px;
+                  width: 100%;
+                  height: 100%;
+                  backface-visibility: hidden;
+                  transition: transform 0.6s;
+                  overflow: hidden;
+                "
+              >
+                <button class="btn-close-flip" aria-label="Cerrar">×</button>
+                <h5 class="fw-bold mb-2">Especificaciones</h5>
+                <ul class="specs-list">
+                  <li><strong>Motor:</strong> V8 5.0L Biturbo</li>
+                  <li><strong>Potencia:</strong> 1,600 CV</li>
+                  <li><strong>0-100 km/h:</strong> 2.6s</li>
+                  <li><strong>Velocidad máx:</strong> 531 km/h</li>
+                  <li><strong>Cilindros:</strong> 8</li>
+                  <li><strong>Transmisión:</strong> Automática 7V</li>
+                </ul>
+                <h5 class="fw-bold mb-2 mt-3">Descripción</h5>
+                <p class="car-description">
+                  El Koenigsegg Jesko es la innovación sueca llevada al extremo.
+                  Con su revolucionario motor V8 biturbo produciendo 1,600 CV,
+                  es el hiperdeportivo más potente jamás creado. Su diseño
+                  aerodinámico radical y su estructura de grafeno lo hacen
+                  extraordinariamente ligero. Con tecnología de vanguardia y un
+                  rendimiento sin límites, el Jesko redefine lo que es posible
+                  en la automoción de alta performance.
+                </p>
               </div>
             </div>
-            <div class="p-3">
-              <h5 class="fw-bold mb-1">€ 3,000,000</h5>
-              <p class="mb-0">Koenigsegg Jesko</p>
-              <small class="text-secondary">Estocolmo, Suecia</small>
-            </div>
-          </div>
-          <div class="car-card-back h-100 p-3">
-            <button class="btn-close-flip" aria-label="Cerrar">×</button>
-            <h5 class="fw-bold mb-2">Especificaciones</h5>
-            <ul class="specs-list">
-              <li><strong>Motor:</strong> V8 5.0L Biturbo</li>
-              <li><strong>Potencia:</strong> 1,600 CV</li>
-              <li><strong>0-100 km/h:</strong> 2.6s</li>
-              <li><strong>Velocidad máx:</strong> 531 km/h</li>
-              <li><strong>Cilindros:</strong> 8</li>
-              <li><strong>Transmisión:</strong> Automática 7V</li>
-            </ul>
-            <h5 class="fw-bold mb-2 mt-3">Descripción</h5>
-            <p class="car-description">El Koenigsegg Jesko es la innovación sueca llevada al extremo. Con su revolucionario motor V8 biturbo produciendo 1,600 CV, es el hiperdeportivo más potente jamás creado. Su diseño aerodinámico radical y su estructura de grafeno lo hacen extraordinariamente ligero. Con tecnología de vanguardia y un rendimiento sin límites, el Jesko redefine lo que es posible en la automoción de alta performance.</p>
           </div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-</section>
+    <!-- ================= FOOTER ================= -->
+    <footer
+      class="py-3 text-center text-secondary"
+      style="background: #000000e3"
+    >
+      <div class="container">
+        <div class="row gy-4 align-items-start">
+          <!-- MARCA -->
+          <div class="col-lg-5">
+            <h6 class="fw-bold text-gradient mb-2">SuperCars</h6>
+            <p class="text-light mb-0">
+              Superdeportivos exclusivos, noticias y experiencias para
+              auténticos amantes del motor.
+            </p>
+          </div>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer text-center">
-  © 2026 SuperCars · Todos los derechos reservados
-</footer>
+          <!-- NAVEGACIÓN -->
+          <div class="col-6 col-lg-3">
+            <h6 class="fw-bold text-gradient mb-2">Navegación</h6>
+            <ul class="list-unstyled small mb-0">
+              <li class="mb-1">
+                <a
+                  href="../index.html"
+                  class="text-light text-decoration-none link-light"
+                  >Inicio</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  href="../paginas/modelos.html"
+                  class="text-light text-decoration-none link-light"
+                  >Modelos</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  href="../paginas/noticias.html"
+                  class="text-light text-decoration-none link-light"
+                  >Noticias</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../paginas/contacto-cuestionario.html"
+                  class="text-light text-decoration-none link-light"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../Js/busqueda.js"></script>
-<script>
-  // Flip card functionality
-  document.querySelectorAll('.ver-mas-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-      const container = this.closest('.car-card-container');
-      container.classList.toggle('flipped');
-    });
-  });
+          <!-- LEGAL -->
+          <div class="col-6 col-lg-2">
+            <h6 class="fw-bold text-gradient mb-2">Legal</h6>
+            <ul class="list-unstyled small mb-0">
+              <li class="mb-1">
+                <a href="#" class="text-light text-decoration-none link-light"
+                  >Aviso legal</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none link-light"
+                  >Privacidad</a
+                >
+              </li>
+            </ul>
+          </div>
 
-  document.querySelectorAll('.btn-close-flip').forEach(btn => {
-    btn.addEventListener('click', function() {
-      const container = this.closest('.car-card-container');
-      container.classList.remove('flipped');
-    });
-  });
-</script>
-</body>
+          <!-- REDES -->
+          <div class="col-lg-2 text-lg-end text-center">
+            <h6 class="fw-bold text-gradient mb-2">Síguenos</h6>
+            <div
+              class="d-flex justify-content-center justify-content-lg-end gap-2 mt-3"
+            >
+              <a
+                href="#"
+                class="btn btn-outline-light btn-sm rounded-circle p-1 lh-1"
+                >IG</a
+              >
+              <a
+                href="#"
+                class="btn btn-outline-light btn-sm rounded-circle p-1 lh-1"
+                >YT</a
+              >
+              <a
+                href="#"
+                class="btn btn-outline-light btn-sm rounded-circle p-1 lh-1"
+                >TT</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-light border-opacity-25 my-3" />
+
+        <div class="text-center text-white-50 small">
+          © 2026 SuperCars · Todos los derechos reservados
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../Js/busqueda.js"></script>
+    <script>
+      // Flip card functionality
+      document.querySelectorAll(".ver-mas-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const container = this.closest(".car-card-container");
+          container.classList.toggle("flipped");
+        });
+      });
+
+      document.querySelectorAll(".btn-close-flip").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const container = this.closest(".car-card-container");
+          container.classList.remove("flipped");
+        });
+      });
+    </script>
+  </body>
 </html>
