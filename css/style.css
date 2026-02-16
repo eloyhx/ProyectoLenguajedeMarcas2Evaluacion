@@ -1,3 +1,4 @@
+/* aun existen propiedades que pueden ser remplazadas con bootstrap */
 /* ====== BASE ====== */
 body {
   background: #000000e3;
@@ -16,6 +17,7 @@ body {
   font-weight: 500;
   transition: color 0.3s ease;
 }
+
 .navbar-dark .navbar-nav .nav-link:hover {
   color: #ff2bd6;
 }
@@ -32,6 +34,7 @@ body {
   border: none;
   transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .btn-gradient:hover {
   color: #ffffff !important;
   transform: translateY(-3px);
@@ -59,7 +62,7 @@ body {
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   overflow: hidden;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
 }
 
 .hero-image::after {
@@ -69,7 +72,7 @@ body {
   right: 0;
   bottom: 0;
   height: 140px;
-  background: linear-gradient(180deg, rgba(10,10,30,0) 0%, rgba(8,8,20,0.9) 60%, rgba(8,8,20,1) 100%);
+  background: linear-gradient(180deg, rgba(10, 10, 30, 0) 0%, rgba(8, 8, 20, 0.9) 60%, rgba(8, 8, 20, 1) 100%);
   pointer-events: none;
 }
 
@@ -78,7 +81,10 @@ body {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
-  .hero-image::after { height: 90px; }
+
+  .hero-image::after {
+    height: 90px;
+  }
 }
 
 /* ====== CARDS custom ====== */
@@ -87,13 +93,15 @@ body {
   border: none;
   color: white;
 }
+
 .car-card img,
 .car-card video {
   height: 220px;
   object-fit: cover;
 }
+
 .bg-panel {
-  background:#12132b;
+  background: #12132b;
 }
 
 
@@ -111,7 +119,7 @@ body {
 
 .offcanvas-backdrop {
   backdrop-filter: blur(6px);
-  background-color: rgba(0,0,0,.6);
+  background-color: rgba(0, 0, 0, .6);
 }
 
 .offcanvas-center .offcanvas-body video {
@@ -122,8 +130,14 @@ body {
   margin-bottom: .4rem;
 }
 
-.offcanvas-center .offcanvas-body p { margin-bottom: .25rem; }
-.offcanvas-center .offcanvas-body .list-group { margin-bottom: .4rem; }
+.offcanvas-center .offcanvas-body p {
+  margin-bottom: .25rem;
+}
+
+.offcanvas-center .offcanvas-body .list-group {
+  margin-bottom: .4rem;
+}
+
 .offcanvas-center .offcanvas-body .list-group-item {
   padding-top: .35rem;
   padding-bottom: .35rem;
@@ -194,7 +208,7 @@ body {
   height: 40px;
   padding-left: 44px;
   border-radius: 999px;
-  background: rgba(255,255,255,.12);
+  background: rgba(255, 255, 255, .12);
   color: #fff;
 }
 
@@ -203,28 +217,28 @@ body {
 }
 
 .nav-search-input:focus {
-  background: rgba(255,255,255,.18);
-  color:#fff;
+  background: rgba(255, 255, 255, .18);
+  color: #fff;
 }
 
 /* modelos /*
 /* ================= HERO ================= */
 
 /* ================= MARCAS ================= */
-.brand-card{
+.brand-card {
   padding: 20px;
   border: 1px solid #e0e0e0;
   min-height: 120px;
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.brand-card:hover{
+.brand-card:hover {
   transform: translateY(-4px);
   border-color: #a855f7;
   box-shadow: 0 8px 20px rgba(168, 85, 247, 0.2);
 }
 
-.brand-card img{
+.brand-card img {
   max-height: 60px;
   max-width: 90%;
   object-fit: contain;
@@ -376,32 +390,33 @@ body {
 
 /* apartado noticias /*
 /* ===== NOTICIAS (mínimo) ===== */
-.news-tile{
+.news-tile {
   background: #12132b;
   border-radius: 16px;
   overflow: hidden;
   transition: .2s;
 }
 
-.news-tile:hover{
+.news-tile:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0,0,0,.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
 }
 
-.news-tile{
+.news-tile {
   background: #12132b;
   border-radius: 16px;
   overflow: hidden;
 }
 
-.news-tile img{
+.news-tile img {
   height: 210px;
   object-fit: cover;
 }
-.news-panel{
-  background: rgba(18,19,43,.9);
+
+.news-panel {
+  background: rgba(18, 19, 43, .9);
   border-radius: 16px;
-  border: 1px solid rgba(255,255,255,.08);
+  border: 1px solid rgba(255, 255, 255, .08);
 }
 
 /* ===== NOTICIAS EN TIRAS ===== */
@@ -409,10 +424,10 @@ body {
   border-radius: 16px;
 }
 
-.section-band{
+.section-band {
   background: #000000e3;
-  border-top: 1px solid rgba(255,255,255,.06);
-  border-bottom: 1px solid rgba(255,255,255,.06);
+  border-top: 1px solid rgba(255, 255, 255, .06);
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
 }
 
 
