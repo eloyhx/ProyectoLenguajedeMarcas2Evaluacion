@@ -56,7 +56,7 @@
               </span>
 
               <input
-                class="form-control nav-search-input"
+                class="form-control nav-search-input text-white"
                 type="search"
                 placeholder="Buscar coches"
                 aria-label="Search"
@@ -179,13 +179,13 @@
                   overflow: hidden;
                 "
               >
-                <div class="car-card-image-wrapper">
+                <div class="car-card-image-wrapper position-relative">
                   <img
                     src="../imgs/lambo_imagen.png"
                     alt="Lamborghini Aventador SVJ"
                   />
                   <div class="car-card-overlay">
-                    <span class="ver-mas-btn">Ver más</span>
+                    <button class="btn btn-outline-light fw-semibold px-4 py-2 small rounded-2 ver-mas-btn"> Ver más</button>
                   </div>
                 </div>
                 <div class="p-3">
@@ -195,17 +195,17 @@
                 </div>
               </div>
               <div
-                class="car-card-back d-flex flex-column justify-content-start p-3 rounded-4 w-100 h-100"
+                class="car-card-back position-absolute top-0 start-0 w-100 h-100 d-flex flex-column p-4 overflow-auto rounded-4 bg-panel"
                 style="
-                  background: #141414;
                   backface-visibility: hidden;
                   transition: transform 0.6s;
-                  overflow: hidden;
+                  background: #141414;
                 "
               >
-                <button class="btn-close-flip" aria-label="Cerrar">×</button>
+                <button class="btn-close btn-close-white position-absolute top-0 end-0 mt-2 me-3 shadow-none btn-close-flip" aria-label="Cerrar">
+                </button>
                 <h5 class="fw-bold mb-2">Especificaciones</h5>
-                <ul class="specs-list">
+                <ul class="list-unstyled mt-3 small lh-lg">
                   <li><strong>Motor:</strong> V12 6.5L</li>
                   <li><strong>Potencia:</strong> 740 CV</li>
                   <li><strong>0-100 km/h:</strong> 2.9s</li>
@@ -241,10 +241,10 @@
                   overflow: hidden;
                 "
               >
-                <div class="car-card-image-wrapper">
+                <div class="car-card-image-wrapper position-relative">
                   <img src="../imgs/bugatty1_imagen.png" alt="Bugatti Chiron" />
                   <div class="car-card-overlay">
-                    <span class="ver-mas-btn">Ver más</span>
+                    <button class="btn btn-outline-light fw-semibold px-4 py-2 small rounded-2 ver-mas-btn"> Ver más</button>
                   </div>
                 </div>
                 <div class="p-3">
@@ -254,20 +254,16 @@
                 </div>
               </div>
               <div
-                class="car-card-back h-100 p-3"
+                class="car-card-back position-absolute top-0 start-0 w-100 h-100 d-flex flex-column p-4 overflow-auto rounded-4 bg-panel"
                 style="
-                  background: #141414;
-                  border-radius: 18px;
-                  width: 100%;
-                  height: 100%;
                   backface-visibility: hidden;
                   transition: transform 0.6s;
-                  overflow: hidden;
+                  background: #141414;
                 "
               >
-                <button class="btn-close-flip" aria-label="Cerrar">×</button>
+                <button class="btn-close btn-close-white position-absolute top-0 end-0 mt-2 me-3 shadow-none btn-close-flip" aria-label="Cerrar"></button>
                 <h5 class="fw-bold mb-2">Especificaciones</h5>
-                <ul class="specs-list">
+                <ul class="specs-list ">
                   <li><strong>Motor:</strong> W16 8.0L</li>
                   <li><strong>Potencia:</strong> 1,500 CV</li>
                   <li><strong>0-100 km/h:</strong> 2.4s</li>
@@ -303,13 +299,13 @@
                   overflow: hidden;
                 "
               >
-                <div class="car-card-image-wrapper">
+                <div class="car-card-image-wrapper position-relative">
                   <img
                     src="../imgs/ferrari1_imagen.png"
                     alt="Ferrari F8 Tributo"
                   />
                   <div class="car-card-overlay">
-                    <span class="ver-mas-btn">Ver más</span>
+                    <button class="btn btn-outline-light fw-semibold px-4 py-2 small rounded-2 ver-mas-btn"> Ver más</button>
                   </div>
                 </div>
                 <div class="p-3">
@@ -319,20 +315,17 @@
                 </div>
               </div>
               <div
-                class="car-card-back h-100 p-3"
+                class="car-card-back position-absolute top-0 start-0 w-100 h-100 d-flex flex-column p-4 overflow-auto rounded-4 bg-panel"
                 style="
-                  background: #141414;
-                  border-radius: 18px;
-                  width: 100%;
-                  height: 100%;
                   backface-visibility: hidden;
                   transition: transform 0.6s;
-                  overflow: hidden;
+                  background: #141414;
                 "
               >
-                <button class="btn-close-flip" aria-label="Cerrar">×</button>
+                <button class="btn-close btn-close-white position-absolute top-0 end-0 mt-2 me-3 shadow-none btn-close-flip" aria-label="Cerrar">
+                </button>
                 <h5 class="fw-bold mb-2">Especificaciones</h5>
-                <ul class="specs-list">
+                <ul class="list-unstyled mt-3 small lh-lg">
                   <li><strong>Motor:</strong> V12 3.9L Biturbo</li>
                   <li><strong>Potencia:</strong> 720 CV</li>
                   <li><strong>0-100 km/h:</strong> 2.9s</li>
@@ -368,10 +361,10 @@
                   overflow: hidden;
                 "
               >
-                <div class="car-card-image-wrapper">
+                <div class="car-card-image-wrapper position-relative">
                   <img src="../imgs/mclaren1_imagen.png" alt="McLaren 720S" />
                   <div class="car-card-overlay">
-                    <span class="ver-mas-btn">Ver más</span>
+                    <button class="btn btn-outline-light fw-semibold px-4 py-2 small rounded-2 ver-mas-btn"> Ver más</button>
                   </div>
                 </div>
                 <div class="p-3">
@@ -381,20 +374,16 @@
                 </div>
               </div>
               <div
-                class="car-card-back h-100 p-3"
+                class="car-card-back position-absolute top-0 start-0 w-100 h-100 d-flex flex-column p-4 overflow-auto rounded-4 bg-panel"
                 style="
-                  background: #141414;
-                  border-radius: 18px;
-                  width: 100%;
-                  height: 100%;
                   backface-visibility: hidden;
                   transition: transform 0.6s;
-                  overflow: hidden;
+                  background: #141414;
                 "
               >
-                <button class="btn-close-flip" aria-label="Cerrar">×</button>
+                <button class="btn-close btn-close-white position-absolute top-0 end-0 mt-2 me-3 shadow-none btn-close-flip" aria-label="Cerrar"></button>
                 <h5 class="fw-bold mb-2">Especificaciones</h5>
-                <ul class="specs-list">
+                <ul class="list-unstyled mt-3 small lh-lg">
                   <li><strong>Motor:</strong> V8 4.0L Biturbo</li>
                   <li><strong>Potencia:</strong> 710 CV</li>
                   <li><strong>0-100 km/h:</strong> 2.8s</li>
@@ -430,10 +419,10 @@
                   overflow: hidden;
                 "
               >
-                <div class="car-card-image-wrapper">
+                <div class="car-card-image-wrapper position-relative">
                   <img src="../imgs/pagani1_imagen.png" alt="Pagani Huayra" />
                   <div class="car-card-overlay">
-                    <span class="ver-mas-btn">Ver más</span>
+                    <button class="btn btn-outline-light fw-semibold px-4 py-2 small rounded-2 ver-mas-btn"> Ver más</button>
                   </div>
                 </div>
                 <div class="p-3">
@@ -443,20 +432,16 @@
                 </div>
               </div>
               <div
-                class="car-card-back h-100 p-3"
+                class="car-card-back position-absolute top-0 start-0 w-100 h-100 d-flex flex-column p-4 overflow-auto rounded-4 bg-panel"
                 style="
-                  background: #141414;
-                  border-radius: 18px;
-                  width: 100%;
-                  height: 100%;
                   backface-visibility: hidden;
                   transition: transform 0.6s;
-                  overflow: hidden;
+                  background: #141414;
                 "
               >
-                <button class="btn-close-flip" aria-label="Cerrar">×</button>
+                <button class="btn-close btn-close-white position-absolute top-0 end-0 mt-2 me-3 shadow-none btn-close-flip" aria-label="Cerrar"></button>
                 <h5 class="fw-bold mb-2">Especificaciones</h5>
-                <ul class="specs-list">
+                <ul class="list-unstyled mt-3 small lh-lg">
                   <li><strong>Motor:</strong> V12 6.0L Biturbo</li>
                   <li><strong>Potencia:</strong> 730 CV</li>
                   <li><strong>0-100 km/h:</strong> 2.8s</li>
@@ -498,7 +483,7 @@
                     alt="Koenigsegg Jesko"
                   />
                   <div class="car-card-overlay">
-                    <span class="ver-mas-btn">Ver más</span>
+                    <button class="btn btn-outline-light fw-semibold px-4 py-2 small rounded-2 ver-mas-btn"> Ver más</button>
                   </div>
                 </div>
                 <div class="p-3">
@@ -508,20 +493,17 @@
                 </div>
               </div>
               <div
-                class="car-card-back h-100 p-3"
+                class="car-card-back position-absolute top-0 start-0 w-100 h-100 d-flex flex-column p-4 overflow-auto rounded-4 bg-panel"
                 style="
-                  background: #141414;
-                  border-radius: 18px;
-                  width: 100%;
-                  height: 100%;
                   backface-visibility: hidden;
                   transition: transform 0.6s;
-                  overflow: hidden;
+                  background: #141414;
                 "
               >
-                <button class="btn-close-flip" aria-label="Cerrar">×</button>
+
+                <button class="btn-close btn-close-white position-absolute top-0 end-0 mt-2 me-3 shadow-none btn-close-flip" aria-label="Cerrar"></button>
                 <h5 class="fw-bold mb-2">Especificaciones</h5>
-                <ul class="specs-list">
+                <ul class="list-unstyled mt-3 small lh-lg">
                   <li><strong>Motor:</strong> V8 5.0L Biturbo</li>
                   <li><strong>Potencia:</strong> 1,600 CV</li>
                   <li><strong>0-100 km/h:</strong> 2.6s</li>
@@ -592,23 +574,6 @@
                   href="../paginas/contacto-cuestionario.html"
                   class="text-light text-decoration-none link-light"
                   >Contacto</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!-- LEGAL -->
-          <div class="col-6 col-lg-2">
-            <h6 class="fw-bold text-gradient mb-2">Legal</h6>
-            <ul class="list-unstyled small mb-0">
-              <li class="mb-1">
-                <a href="#" class="text-light text-decoration-none link-light"
-                  >Aviso legal</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none link-light"
-                  >Privacidad</a
                 >
               </li>
             </ul>

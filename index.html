@@ -7,7 +7,8 @@
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"/>
+      rel="stylesheet"
+    />
     <script src="Js/offcanva.js"></script>
     <script src="Js/carrusel.js"></script>
     <!-- CSS -->
@@ -16,14 +17,16 @@
   <body>
     <!-- NAVBAR -->
     <nav
-      class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent">
+      class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent"
+    >
       <div class="container">
         <a class="navbar-brand fw-bold" href="/index.html">SuperCars</a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav">
+          data-bs-target="#navbarNav"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -40,7 +43,8 @@
             <li class="nav-item ms-lg-3">
               <a
                 class="btn btn-gradient btn-sm rounded-pill px-4"
-                href="paginas/contacto-cuestionario.html">
+                href="paginas/contacto-cuestionario.html"
+              >
                 Contáctanos
               </a>
             </li>
@@ -49,7 +53,13 @@
       </div>
     </nav>
     <!-- HERO -->
-    <section class="hero-image d-flex align-items-center">
+    <section
+      class="hero-image vh-100 position-relative overflow-hidden d-flex align-items-center"
+      style="
+        border-radius: 0 0 40px 40px;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+      "
+    >
       <div class="hero-overlay position-absolute w-100 h-100"></div>
       <div class="container position-relative">
         <div class="row">
@@ -68,16 +78,18 @@
         </div>
       </div>
     </section>
-<!-- MODELOS DESTACADOS -->
-<section class="py-5 text-white" id="modelos">
-  <div class="container">
-    <h2 class="text-center fw-bold">MODELOS DESTACADOS</h2>
+    <!-- MODELOS DESTACADOS -->
+    <section class="py-5 text-white" id="modelos">
+      <div class="container">
+        <h2 class="text-center fw-bold">MODELOS DESTACADOS</h2>
         <div class="row g-4 mt-4">
           <!-- CARD -->
           <div class="col-md-4">
             <div class="card car-card">
               <video class="card-img-top" autoplay muted loop playsinline>
-                <source src="https://res.cloudinary.com/doiaqcxy9/video/upload/q_auto,f_auto,w_960/lambo_a9ven2.mp4">
+                <source
+                  src="https://res.cloudinary.com/doiaqcxy9/video/upload/q_auto,f_auto,w_960/lambo_a9ven2.mp4"
+                />
               </video>
               <div class="card-body text-center">
                 <h5>Lamborghini Aventador SVJ</h5>
@@ -88,7 +100,8 @@
                   data-title="Lamborghini Aventador"
                   data-video="videos/7727416-hd_1920_1080_25fps.mp4"
                   data-desc="Superdeportivo V12 con diseño extremo y prestaciones de alto nivel."
-                  data-specs="Motor V12|0–100 km/h: 2.9s|Velocidad máx: 350 km/h">
+                  data-specs="Motor V12|0–100 km/h: 2.9s|Velocidad máx: 350 km/h"
+                >
                   Ver más
                 </button>
               </div>
@@ -100,7 +113,8 @@
               <video class="card-img-top" autoplay muted loop playsinline>
                 <source
                   src="https://res.cloudinary.com/doiaqcxy9/video/upload/q_auto,f_auto,w_960/ferrari_rsmypt.mp4"
-                  type="video/mp4"/>
+                  type="video/mp4"
+                />
               </video>
               <div class="card-body text-center">
                 <h5>Ferrari F8 Tributo</h5>
@@ -111,7 +125,8 @@
                   data-title="Ferrari F8 Tributo"
                   data-video="videos/8443861-uhd_3840_2160_30fps.mp4"
                   data-desc="Deportivo italiano con motor V8 biturbo y aerodinámica avanzada."
-                  data-specs="Motor V8|0–100 km/h: 2.8s|Velocidad máx: 340 km/h">
+                  data-specs="Motor V8|0–100 km/h: 2.8s|Velocidad máx: 340 km/h"
+                >
                   Ver más
                 </button>
               </div>
@@ -121,7 +136,9 @@
           <div class="col-md-4">
             <div class="card car-card">
               <video class="card-img-top" autoplay muted loop playsinline>
-                <source src="https://res.cloudinary.com/doiaqcxy9/video/upload/q_auto,f_auto,w_960/mcLaren_e2hqgo.mp4">
+                <source
+                  src="https://res.cloudinary.com/doiaqcxy9/video/upload/q_auto,f_auto,w_960/mcLaren_e2hqgo.mp4"
+                />
               </video>
               <div class="card-body text-center">
                 <h5>McLaren 720S</h5>
@@ -132,7 +149,8 @@
                   data-title="McLaren 720S"
                   data-video="videos/13127658_1920_1080_24fps.mp4"
                   data-desc="Superdeportivo británico ligero y extremadamente rápido."
-                  data-specs="Motor V8|0–100 km/h: 2.9s|Velocidad máx: 341 km/h">
+                  data-specs="Motor V8|0–100 km/h: 2.9s|Velocidad máx: 341 km/h"
+                >
                   Ver más
                 </button>
               </div>
@@ -141,12 +159,12 @@
         </div>
       </div>
     </section>
-<!-- GALERÍA / CARRUSEL 3D -->
-<section class="py-5 text-white">
-  <div class="container text-center">
-    <h2 class="section-title mb-5">GALERÍA EXCLUSIVA</h2>
-        <div class="carousel-3d">
-          <div class="carousel-track">
+    <!-- GALERÍA / CARRUSEL 3D -->
+    <section class="py-5 text-white">
+      <div class="container text-center">
+        <h2 class="section-title mb-5">GALERÍA EXCLUSIVA</h2>
+        <div class="carousel-3d" style="position: relative; height: 450px; perspective: 1400px; overflow: hidden; cursor: grab; user-select: none">
+          <div class="carousel-track" style="position: absolute; inset: 0; transform-style: preserve-3d; transition: transform .8s cubic-bezier(.77, 0, .175, 1)">
             <div class="carousel-card"><img src="imgs/svj.jpg" /></div>
             <div class="carousel-card"><img src="imgs/porsche.jpg" /></div>
             <div class="carousel-card"><img src="imgs/jesko.jpg" /></div>
@@ -161,10 +179,10 @@
         </div>
       </div>
     </section>
-<!-- NOTICIAS -->
-<section class="py-5 text-white">
-  <div class="container">
-    <h2 class="text-center fw-bold">ÚLTIMAS NOTICIAS</h2>
+    <!-- NOTICIAS -->
+    <section class="py-5 text-white">
+      <div class="container">
+        <h2 class="text-center fw-bold">ÚLTIMAS NOTICIAS</h2>
         <div class="row mt-4 g-4">
           <div class="col-md-6">
             <div class="card bg-panel text-white p-4 rounded-3 h-100">
@@ -179,7 +197,7 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="card bg-panel text-white p-4 rounded-3 h-100" >
+            <div class="card bg-panel text-white p-4 rounded-3 h-100">
               <h5>Eventos de Velocidad</h5>
               <p>
                 Conoce los eventos más exclusivos del mundo del motor, circuitos
@@ -193,80 +211,95 @@
         </div>
       </div>
     </section>
-<!-- FOOTER -->
-<footer class="py-3 text-center text-secondary" style="background:#000000e3">
-  <div class="container">
-                <div class="row gy-4 align-items-start">
+    <!-- FOOTER -->
+    <footer
+      class="py-3 text-center text-secondary"
+      style="background: #000000e3"
+    >
+      <div class="container">
+        <div class="row gy-4 align-items-start">
+          <!-- MARCA -->
+          <div class="col-lg-5">
+            <h6 class="fw-bold text-gradient mb-2">SuperCars</h6>
+            <p class="text-light mb-0">
+              Superdeportivos exclusivos, noticias y experiencias para
+              auténticos amantes del motor.
+            </p>
+          </div>
 
-                    <!-- MARCA -->
-                    <div class="col-lg-5">
-                        <h6 class="fw-bold text-gradient mb-2">SuperCars</h6>
-                        <p class="text-light mb-0">
-                            Superdeportivos exclusivos, noticias y experiencias
-                            para auténticos amantes del motor.
-                        </p>
-                    </div>
+          <!-- NAVEGACIÓN -->
+          <div class="col-6 col-lg-3">
+            <h6 class="fw-bold text-gradient mb-2">Navegación</h6>
+            <ul class="list-unstyled small mb-0">
+              <li class="mb-1">
+                <a
+                  href="../index.html"
+                  class="text-light text-decoration-none link-light"
+                  >Inicio</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  href="../paginas/modelos.html"
+                  class="text-light text-decoration-none link-light"
+                  >Modelos</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  href="../paginas/noticias.html"
+                  class="text-light text-decoration-none link-light"
+                  >Noticias</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../paginas/contacto-cuestionario.html"
+                  class="text-light text-decoration-none link-light"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
 
-                    <!-- NAVEGACIÓN -->
-                    <div class="col-6 col-lg-3">
-                        <h6 class="fw-bold text-gradient mb-2">Navegación</h6>
-                        <ul class="list-unstyled small mb-0">
-                            <li class="mb-1">
-                                <a href="../index.html"
-                                    class="text-light text-decoration-none link-light">Inicio</a>
-                            </li>
-                            <li class="mb-1">
-                                <a href="../paginas/modelos.html"
-                                    class="text-light text-decoration-none link-light">Modelos</a>
-                            </li>
-                            <li class="mb-1">
-                                <a href="../paginas/noticias.html"
-                                    class="text-light text-decoration-none link-light">Noticias</a>
-                            </li>
-                            <li>
-                                <a href="../paginas/contacto-cuestionario.html"
-                                    class="text-light text-decoration-none link-light">Contacto</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- LEGAL -->
-                    <div class="col-6 col-lg-2">
-                        <h6 class="fw-bold text-gradient mb-2">Legal</h6>
-                        <ul class="list-unstyled small mb-0">
-                            <li class="mb-1">
-                                <a href="#" class="text-light text-decoration-none link-light">Aviso legal</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-light text-decoration-none link-light">Privacidad</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- REDES -->
-                    <div class="col-lg-2 text-lg-end text-center">
-                        <h6 class="fw-bold text-gradient mb-2">Síguenos</h6>
-                        <div class="d-flex justify-content-center justify-content-lg-end gap-2 mt-3">
-                            <a href="#" class="btn btn-outline-light btn-sm rounded-circle p-1 lh-1">IG</a>
-                            <a href="#" class="btn btn-outline-light btn-sm rounded-circle p-1 lh-1">YT</a>
-                            <a href="#" class="btn btn-outline-light btn-sm rounded-circle p-1 lh-1">TT</a>
-                        </div>
-                    </div>
-
-                </div>
-
-                <hr class="border-light border-opacity-25 my-3">
-
-                <div class="text-center text-white-50 small">
-                    © 2026 SuperCars · Todos los derechos reservados
-                </div>
+          <!-- REDES -->
+          <div class="col-lg-2 text-lg-end text-center">
+            <h6 class="fw-bold text-gradient mb-2">Síguenos</h6>
+            <div
+              class="d-flex justify-content-center justify-content-lg-end gap-2 mt-3"
+            >
+              <a
+                href="#"
+                class="btn btn-outline-light btn-sm rounded-circle p-1 lh-1"
+                >IG</a
+              >
+              <a
+                href="#"
+                class="btn btn-outline-light btn-sm rounded-circle p-1 lh-1"
+                >YT</a
+              >
+              <a
+                href="#"
+                class="btn btn-outline-light btn-sm rounded-circle p-1 lh-1"
+                >TT</a
+              >
             </div>
-</footer>
+          </div>
+        </div>
+
+        <hr class="border-light border-opacity-25 my-3" />
+
+        <div class="text-center text-white-50 small">
+          © 2026 SuperCars · Todos los derechos reservados
+        </div>
+      </div>
+    </footer>
     <!-- OFFCANVAS -->
     <div
       class="offcanvas offcanvas-center text-bg-dark"
       tabindex="-1"
-      id="offcanvasCar">
+      id="offcanvasCar"
+    >
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasTitle"></h5>
         <button
