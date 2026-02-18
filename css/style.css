@@ -1,296 +1,348 @@
 :root {
-    --bg: #000000e3;
-    --panel: #12132b;
-    --a1: #8f00ff;
-    --a2: #ff0077;
-    --hot: #ff2bd6;
-    --glass: rgba(20, 20, 30, .75)
+  --bg: #000000e3;
+  --panel: #12132b;
+  --a1: #8f00ff;
+  --a2: #ff0077;
+  --hot: #ff2bd6;
+  --glass: rgba(20, 20, 30, 0.75);
 }
 
 body {
-    background: var(--bg);
-    font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif
+  background: var(--bg);
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
 }
 
 .navbar-transparent {
-    background: rgba(0, 0, 0, .25);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px)
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, .9);
-    font-weight: 500;
-    transition: color .25s
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  transition: color 0.25s;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: var(--hot)
+  color: var(--hot);
 }
 
 .btn-gradient {
-    background: linear-gradient(45deg, var(--a1), var(--a2));
-    color: #fff;
-    border: 0;
-    transition: transform .25s, box-shadow .25s
+  background: linear-gradient(45deg, var(--a1), var(--a2));
+  color: #fff;
+  border: 0;
+  transition: transform 0.25s, box-shadow 0.25s;
 }
 
 .btn-gradient:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(255, 0, 200, .4)
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 0, 200, 0.4);
 }
 
 .btn-outline-gradient {
-    border: 1px solid var(--a1);
-    color: var(--a1)
+  border: 1px solid var(--a1);
+  color: var(--a1);
 }
 
 .text-gradient {
-    background: linear-gradient(45deg, var(--hot), var(--a1));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent
+  background: linear-gradient(45deg, var(--hot), var(--a1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .hero-image {
-    background: url("../imgs/nika-qufarashvili-lSTN0nYAUKA-unsplash.jpg") center/cover no-repeat;
+  background: url("../imgs/nika-qufarashvili-lSTN0nYAUKA-unsplash.jpg")
+    center/cover no-repeat;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+.hero-modelos {
+  min-height: 90vh;
+  background: url("../imgs/porsche2.jpg") center / cover no-repeat;
+  position: relative;
+  border-radius: 0 0 40px 40px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+.news-hero {
+  min-height: 90vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../imgs/senna.jpeg") center/cover no-repeat;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+.news-row {
+    background: #000000e3;
 }
 
 .hero-image:after {
-    content: "";
-    position: absolute;
-    inset: auto 0 0;
-    height: 140px;
-    background: linear-gradient(180deg, rgba(10, 10, 30, 0), rgba(8, 8, 20, .9) 60%, rgba(8, 8, 20, 1));
-    pointer-events: none
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 140px;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 30, 0),
+    rgba(8, 8, 20, 0.9) 60%,
+    rgba(8, 8, 20, 1)
+  );
+  pointer-events: none;
 }
 
-@media(max-width:767px) {
-    .hero-image {
-        border-radius: 0 0 20px 20px
-    }
+@media (max-width: 767px) {
+  .hero-image {
+    border-radius: 0 0 20px 20px;
+  }
 
-    .hero-image:after {
-        height: 90px
-    }
+  .hero-image:after {
+    height: 90px;
+  }
 }
 
 .bg-panel,
 .car-card {
-    background: var(--panel)
+  background: var(--panel);
 }
 
 .car-card {
-    color: #fff
+  color: #fff;
 }
 
 .offcanvas-center {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) !important;
-    width: min(600px, 90%);
-    max-height: 55vh;
-    border-radius: 16px
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  width: min(600px, 90%);
+  max-height: 55vh;
+  border-radius: 16px;
 }
 
 .offcanvas-backdrop {
-    backdrop-filter: blur(6px);
-    background: rgba(0, 0, 0, .6)
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .offcanvas-center .offcanvas-body video {
-    max-height: 120px;
-    width: 100%;
-    object-fit: cover
+  max-height: 120px;
+  width: 100%;
+  object-fit: cover;
+}
+.carousel-3d {
+  position: relative;
+  height: 450px;
+  perspective: 1400px;
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+}
+.carousel-track {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .carousel-card {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 280px;
-    height: 380px;
-    border-radius: 16px;
-    overflow: hidden;
-    background: #000;
-    transition: transform 1s, opacity 1s
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 280px;
+  height: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+  transition: transform 1s, opacity 1s;
 }
 
 .carousel-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(.5);
-    transition: filter .6s
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+  transition: filter 0.6s;
 }
 
 .carousel-card.active {
-    transform: scale(1.1);
-    z-index: 2
+  transform: scale(1.1);
+  z-index: 2;
 }
 
 .carousel-card.active img {
-    filter: brightness(1)
+  filter: brightness(1);
 }
 
 .nav-search {
-    max-width: 520px;
-    width: 100%
+  max-width: 520px;
+  width: 100%;
 }
 
 .nav-search-input {
-    height: 40px;
-    padding-left: 44px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, .12);
-    color: #fff
+  height: 40px;
+  padding-left: 44px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
 }
 
 .nav-search-input::placeholder {
-    color: #fff
+  color: #fff;
 }
 
 .nav-search-input:focus {
-    background: rgba(255, 255, 255, .18)
+  background: rgba(255, 255, 255, 0.18);
 }
 
 .brand-card {
-    min-height: 120px;
-    border: 1px solid #e0e0e0;
-    transition: transform .25s, border-color .25s, box-shadow .25s
+  min-height: 120px;
+  border: 1px solid #e0e0e0;
 }
 
 .brand-card:hover {
-    transform: translateY(-4px);
-    border-color: #a855f7;
-    box-shadow: 0 8px 20px rgba(168, 85, 247, .2)
+  transform: translateY(-4px);
+  border-color: #a855f7;
+  box-shadow: 0 8px 20px rgba(168, 85, 247, 0.2);
 }
 
 .brand-card img {
-    max-height: 60px;
-    max-width: 90%;
-    object-fit: contain
+  max-height: 60px;
+  max-width: 90%;
+  object-fit: contain;
+}
+
+.img-fluid {
+  max-width:260px; aspect-ratio:16/9
 }
 
 .car-card-image-wrapper {
-    position: relative;
-    overflow: hidden;
-    height: 260px
+  position: relative;
+  overflow: hidden;
+  height: 260px;
 }
 
 .car-card-image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    object-position: center 62%
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: center 62%;
 }
 
 .car-card-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, .6);
-    display: flex;
-    place-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity .25s
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  place-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.25s;
 }
 
 .car-card:hover .car-card-overlay {
-    opacity: 1
+  opacity: 1;
 }
 
-
 .car-card:hover .ver-mas-btn {
-    background: rgba(255, 255, 255, .3);
-    border-color: #fff
+  background: rgba(255, 255, 255, 0.3);
+  border-color: #fff;
 }
 
 .car-card-back {
-    position: absolute;
-    inset: 0;
-    transform: rotateY(180deg);
-    padding: 20px;
-    overflow: auto
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+  padding: 20px;
+  overflow: auto;
 }
 
 .car-card-container.flipped .car-card {
-    transform: rotateY(180deg)
+  transform: rotateY(180deg);
 }
 
 .car-card-container.flipped .car-card-back {
-    transform: rotateY(0)
+  transform: rotateY(0);
 }
 .btn-close-flip:hover {
-    transform: scale(1.2)
+  transform: scale(1.2);
 }
 
 .specs-list li {
-    padding: 5px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, .1);
-    color: #ddd
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ddd;
 }
 
 .video-bg {
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .video-bg video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .video-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, .6)
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .bg-glass {
-    background: var(--glass);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, .08)
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .bg-glass .form-control,
 .bg-glass .form-select {
-    background: rgba(255, 255, 255, .08);
-    border-color: rgba(255, 255, 255, .15);
-    color: #fff
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
 }
 
 .bg-glass .form-control:focus,
 .bg-glass .form-select:focus {
-    background: rgba(255, 255, 255, .12);
-    border-color: var(--hot);
-    box-shadow: none
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--hot);
+  box-shadow: none;
 }
 
 .form-control,
 .form-select {
-    color: #fff
+  color: #fff;
 }
 
 .form-control::placeholder {
-    color: rgba(255, 255, 255, .55)
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .form-control:-webkit-autofill {
-    -webkit-text-fill-color: #fff
+  -webkit-text-fill-color: #fff;
+}
+
+.footer-dark {
+  background: #000000e3;
 }
 
 /* prueba */
 
-footer .btn.rounded-circle{
+footer .btn.rounded-circle {
   width: 34px;
   height: 34px;
   display: inline-flex;
