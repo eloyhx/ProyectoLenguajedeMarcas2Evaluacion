@@ -54,7 +54,7 @@ body {
 }
 
 .hero-image {
-  background: url("../imgs/nika-qufarashvili-lSTN0nYAUKA-unsplash.jpg")
+  background: url("../tiago-ferreira-VofrTG1EUpE-unsplash.jpg")
     center/cover no-repeat;
   border-radius: 0 0 40px 40px;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
@@ -62,7 +62,7 @@ body {
 
 .hero-modelos {
   min-height: 90vh;
-  background: url("../imgs/porsche2.jpg") center / cover no-repeat;
+  background: url("../campbell-3ZUsNJhi_Ik-unsplash.jpg") center / cover no-repeat;
   position: relative;
   border-radius: 0 0 40px 40px;
   overflow: hidden;
@@ -350,3 +350,5 @@ footer .btn.rounded-circle {
   justify-content: center;
   padding: 0;
 }
+
+.form-control::placeholder { color: rgba(255,255,255,.6); }

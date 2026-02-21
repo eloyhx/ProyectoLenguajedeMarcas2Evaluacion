@@ -10,71 +10,89 @@ const vehiculos = [
 
 // Mapeo de IDs a secciones en la página
 const enlacesModelos = {
-  "aventador": "#lamborghini-aventador",
-  "chiron": "#bugatti-chiron",
-  "f8tributo": "#ferrari-f8",
+  aventador: "#lamborghini-aventador",
+  chiron: "#bugatti-chiron",
+  f8tributo: "#ferrari-f8",
   "720s": "#mclaren-720s",
-  "huayra": "#pagani-huayra",
-  "jesko": "#koenigsegg-jesko"
+  huayra: "#pagani-huayra",
+  jesko: "#koenigsegg-jesko"
 };
 
-// Manejador del formulario de búsqueda
-document.addEventListener('DOMContentLoaded', function() {
-  const searchForm = document.querySelector('.nav-search');
-  const searchInput = document.querySelector('.nav-search-input');
+function norm(t) {
+  return (t || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim();
+}
 
-  if (searchForm && searchInput) {
-    // Crear datalist si no existe
-    if (!document.getElementById('vehiculos-list')) {
-      const datalist = document.createElement('datalist');
-      datalist.id = 'vehiculos-list';
-      
-      vehiculos.forEach(vehiculo => {
-        const option = document.createElement('option');
-        option.value = vehiculo.nombre;
-        datalist.appendChild(option);
-      });
-      
-      document.body.appendChild(datalist);
-    }
-    
-    // Vincular el input al datalist
-    searchInput.setAttribute('list', 'vehiculos-list');
+document.addEventListener("DOMContentLoaded", () => {
+  const searchForm = document.querySelector(".nav-search");
+  const searchInput = document.querySelector(".nav-search-input");
+  if (!searchForm || !searchInput) return;
 
-    // Manejador para cuando se selecciona una opción
-    searchInput.addEventListener('change', function() {
-      const valor = this.value.trim();
-      
-      if (valor === '') return;
+  // Datalist (incluye modelos + marcas)
+  let datalist = document.getElementById("vehiculos-list");
+  if (!datalist) {
+    datalist = document.createElement("datalist");
+    datalist.id = "vehiculos-list";
 
-      // Buscar el vehículo
-      const vehiculoEncontrado = vehiculos.find(v => 
-        v.nombre.toLowerCase() === valor.toLowerCase()
-      );
-
-      if (vehiculoEncontrado) {
-        // Limpiar el input
-        this.value = '';
-
-        // Si es un modelo específico, desplazarse a él
-        if (enlacesModelos[vehiculoEncontrado.id]) {
-          const elemento = document.querySelector(enlacesModelos[vehiculoEncontrado.id]);
-          if (elemento) {
-            elemento.scrollIntoView({ behavior: 'smooth' });
-          }
-        } else {
-          // Si es una marca, desplazarse a la sección de marcas
-          const seccionMarcas = document.querySelector('section:has(.brand-card)');
-          if (seccionMarcas) {
-            seccionMarcas.scrollIntoView({ behavior: 'smooth' });
-          }
-        }
-      }
+    // modelos
+    vehiculos.forEach((v) => {
+      const option = document.createElement("option");
+      option.value = v.nombre;
+      datalist.appendChild(option);
     });
 
-    // Prevenir el envío del formulario por defecto
-    searchForm.addEventListener('submit', function(e) {
-      e.preventDefault();
+    // marcas únicas
+    [...new Set(vehiculos.map((v) => v.marca))].forEach((m) => {
+      const option = document.createElement("option");
+      option.value = m;
+      datalist.appendChild(option);
     });
+
+    document.body.appendChild(datalist);
   }
+  searchInput.setAttribute("list", "vehiculos-list");
+
+  function irAResultados(valorRaw) {
+    const valor = norm(valorRaw);
+    if (!valor) return;
+
+    // 1) Match exacto por modelo (cuando eliges del datalist)
+    const exacto = vehiculos.find((v) => norm(v.nombre) === valor);
+    if (exacto && enlacesModelos[exacto.id]) {
+      document.querySelector(enlacesModelos[exacto.id])?.scrollIntoView({ behavior: "smooth" });
+      searchInput.value = "";
+      return;
+    }
+
+    // 2) Si escriben una marca (Ferrari), baja a la sección de marcas
+    const marcaExiste = vehiculos.some((v) => norm(v.marca) === valor);
+    if (marcaExiste) {
+      const seccionMarcas = document.querySelector(".brand-card")?.closest("section");
+      seccionMarcas?.scrollIntoView({ behavior: "smooth" });
+      searchInput.value = "";
+      return;
+    }
+
+    // 3) Búsqueda por palabra (parcial): "ferr", "trib", "720"
+    const parcial = vehiculos.find((v) => norm(v.nombre).includes(valor) || norm(v.marca).includes(valor));
+    if (parcial && enlacesModelos[parcial.id]) {
+      document.querySelector(enlacesModelos[parcial.id])?.scrollIntoView({ behavior: "smooth" });
+      searchInput.value = "";
+      return;
+    }
+  }
+
+  // Buscar al pulsar Enter
+  searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    irAResultados(searchInput.value);
+  });
+
+  // También buscar cuando el usuario elige algo del datalist
+  searchInput.addEventListener("change", () => {
+    irAResultados(searchInput.value);
+  });
 });
